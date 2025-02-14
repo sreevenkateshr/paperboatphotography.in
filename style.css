@@ -1,0 +1,1243 @@
+@import url("https://fonts.cdnfonts.com/css/rightman-signature");
+h2 {
+  font-family: "Rightman Signature", sans-serif;
+}
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+/* Image Container */
+.image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background Image Styles */
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0s; /* Instant change */
+}
+
+/* Image Animation - Instant Switch */
+.image1 {
+  animation: switchImage1 20s infinite;
+}
+
+.image2 {
+  animation: switchImage2 20s infinite;
+}
+
+/* First Image is visible for 10s, then disappears */
+@keyframes switchImage1 {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Second Image is visible after 10s */
+@keyframes switchImage2 {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  50.01%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Content Styling */
+.content {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
+  z-index: 2;
+  color: rgb(244, 244, 244);
+}
+
+/* Quote Styling */
+.quote1{
+  font-style: italic;
+  font-size: 1rem;
+  color: rgb(250, 250, 249);
+}
+
+/* Navbar Styling */
+.navbar {
+  background: transparent;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Navbar Brand Logo */
+.navbar .navbar-brand img {
+  filter: brightness(0) invert(1); /* White logo */
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Navbar Links - Default White */
+.navbar .nav-link {
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+}
+
+/* Sticky Navbar Effect */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links - Change to Black on Scroll */
+.navbar.scrolled .nav-link {
+  color: black !important;
+}
+
+/* Restore Original Logo When Scrolled */
+.navbar.scrolled .navbar-brand img {
+  filter: none;
+}
+.navbar-nav {
+  gap: 20px;
+}
+/* Mobile Navbar Center Alignment */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    gap: 0px;
+  }
+  .custom-class {
+    display: block; /* Make the button block-level to allow centering */
+    margin: 0 auto;
+  }
+  .navbar-nav .nav-link:hover::after {
+    width: 10%;
+  }
+  .navbar-toggler{
+    border-radius: 0px;
+  }
+}
+
+/* Ensure the link takes only the text width */
+.navbar-nav .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 1.2rem; /* Adjust text size as needed */
+  padding: 10px 15px;
+}
+
+.navbar.scrolled .nav-link::after
+{
+  background-color: #000;
+}
+/* Underline Animation on Hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.5s ease-in-out;
+  transform: translateX(-50%);
+}
+
+/* Expand Underline on Hover - Matches text width */
+.navbar-nav .nav-link:hover::after {
+  width: 80%; /* Now matches text width only */
+}
+
+/* Click Line Animation Effect */
+.navbar-nav .nav-link:focus::after {
+  width: 80%;
+  background-color: #589cd3; /* Change color when clicked */
+}
+
+/* Mobile Navbar Adjustments */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Maintain readability */
+  }
+  .navbar-nav .nav-link::after {
+    bottom: 5px; /* Keep line close to text in mobile view */
+  }
+}
+
+/* About Section Styling */
+
+.about-section {
+  padding: 60px 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #555;
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+  text-align: justify;
+}
+/* Styled Link Button */
+/* From Uiverse.io by adamgiebl */ 
+.button-about{
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.7em 2.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+
+  /* Center the button */
+  /* margin: 40px auto;  */
+  text-align: center;
+}
+
+
+.button-about span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid rgb(5, 6, 6);
+}
+
+.button-about span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+
+.button-about:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: rgb(5, 6, 6);
+}
+
+.button-about:hover {
+  color: white;
+}
+
+.button-about:active span::before {
+  background: #2751cd;
+
+}
+a {
+  text-decoration: none; /* Remove underline */
+}
+
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Work container */
+/* Title Styling */
+.work-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Work container */
+.work-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Work items (Images) */
+.work-item {
+  width: 240px;
+  height: 280px;
+  position: absolute;
+  transition: transform 1.2s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 0; /* Start hidden */
+  transform: translateX(-500px); /* Start from left out of view */
+}
+
+/* Image Styling */
+.work-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Hover effect */
+
+/* Keyframes for smooth infinite rotation */
+@keyframes rotateImages {
+  0% {
+    transform: translateX(-500px) scale(0.8);
+    opacity: 0;
+    z-index: 1;
+  }
+  20% {
+    transform: translateX(-300px) scale(0.9);
+    opacity: 0.6;
+    z-index: 2;
+  }
+  40% {
+    transform: translateX(0) scale(1.2);
+    opacity: 1;
+    z-index: 3;
+  }
+  60% {
+    transform: translateX(300px) scale(0.9);
+    opacity: 0.6;
+    z-index: 2;
+  }
+  80% {
+    transform: translateX(500px) scale(0.8);
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    transform: translateX(700px) scale(0);
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+.work-item:nth-child(1) {
+  animation: rotateImages 8s infinite ease-in-out 0s;
+  opacity: 1; /* Show the first image */
+  transform: translateX(0); /* Initially center the first image */
+}
+
+.work-item:nth-child(2) {
+  animation: rotateImages 8s infinite ease-in-out 1.6s;
+}
+
+.work-item:nth-child(3) {
+  animation: rotateImages 8s infinite ease-in-out 3.2s;
+}
+
+.work-item:nth-child(4) {
+  animation: rotateImages 8s infinite ease-in-out 4.8s;
+}
+
+.work-item:nth-child(5) {
+  animation: rotateImages 8s infinite ease-in-out 6.4s;
+}
+
+.work-item:nth-child(6) {
+  animation: rotateImages 8s infinite ease-in-out 8s;
+}
+
+
+
+/* Fade-in effect for title */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* capturing styling */
+.capturing-moments {
+  background-color: #f8f8f8ff;
+  padding: 80px 20px;
+  opacity: 0; /* Start with hidden section */
+  transition: opacity 1s ease-in-out; /* Smooth transition when section appears */
+}
+
+/* Title styling */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Subtitle styling */
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #555;
+}
+
+/* Animated text styling */
+@media screen and (max-width: 768px) {
+  .animated-text {
+    text-align: justify;
+  }
+  
+}
+.animated-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 10px 0;
+  color: #777;
+  opacity: 0; /* Start with hidden text */
+  transform: translateY(20px); /* Start with slight offset */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Apply smooth transition */
+}
+
+/* When the section and text comes into view */
+.capturing-moments.visible {
+  opacity: 1; /* Fade in section */
+}
+
+.capturing-moments.visible .animated-text {
+  opacity: 1; /* Fade in text */
+  transform: translateY(0); /* Move to normal position */
+}
+/* Carousel Styling */
+
+.photo-carousel{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+  position: relative;
+}
+
+/* Carousel Layout */
+.carousel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  gap: 20px;
+}
+
+/* Ensuring All Images & Text Box are Equal */
+.carousel-box {
+  width: 33.3%;
+  height: 400px; /* Set height to maintain uniformity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Box Styling */
+.text-box {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.text-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Carousel Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Positioning Buttons */
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+/* ✅ Mobile View Optimizations */
+@media (max-width: 768px) {
+  .carousel-content {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .carousel-box {
+    width: 100%;
+    height: 250px; /* Ensuring same height for all */
+  }
+
+  .carousel-box img {
+    height: 250px; /* Fixing height for consistency */
+  }
+
+  .text-box {
+    height: 250px; /* Text box same size as image */
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .text-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-box p {
+    font-size: 0.9rem;
+  }
+
+  /* Resize Buttons for Mobile */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: auto;
+    bottom: 10px;
+  }
+
+  .carousel-control-prev {
+    left: 20%;
+  }
+
+  .carousel-control-next {
+    right: 20%;
+  }
+}
+
+/* Section Styling */
+.our-services {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+.button-service{
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.7em 2.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+
+  /* Center the button */
+  margin: 40px auto; /* Adds space above and centers horizontally */
+  text-align: center;
+}
+
+
+.button-service span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid rgb(5, 6, 6);
+}
+
+.button-service span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+
+.button-service:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: rgb(0, 0, 0);
+}
+
+.button-service:hover {
+  color: white;
+}
+
+.button-service:active span::before {
+  background: #2751cd;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Service Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Service Card Styling */
+.service-card {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border-radius: 10px; */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+  border-radius: 0; /* No curves */
+}
+
+.service-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+/* Read More Button */
+.read-more {
+  display: block;
+  width: 200px;
+  margin: 40px auto 0;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.read-more:hover {
+  background: #333;
+}
+
+/* ✅ Mobile View (Responsive) */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+
+  .service-card img {
+    height: 180px;
+  }
+
+  .read-more {
+    width: 100%;
+  }
+}
+
+/* Testimonials Section */
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f8f8f8ff;
+  padding: 80px 20px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Left Side Text */
+.testimonial-desc {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Client Image */
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Testimonial Content */
+.testimonial-content p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.testimonial-content h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Remove Vertical Animation */
+.carousel-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .testimonial-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-img {
+    margin: 0 auto 10px;
+  }
+
+  .testimonial-content p {
+    font-size: 1rem;
+  }
+
+  .testimonial-content h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Booking Section */
+/* Booking Section */
+.booking-section {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.booking-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Booking Text */
+.booking-text {
+  padding-right: 40px;
+}
+
+.booking-text h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.booking-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.booking-form .form-group {
+  margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+  border: none;
+  border-bottom: 2px solid #333;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.booking-form .form-control:focus {
+  outline: none;
+  border-bottom: 2px solid #000;
+  box-shadow: none;
+}
+
+/* Book Now Button */
+.book-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border-radius: 0px !important;
+  transition: 0.3s ease-in-out;
+  border: 2px solid #000000;
+  font-weight: 500;
+}
+
+.book-btn:hover {
+  background-color: #ffffff;
+  border-color: #000;
+}
+
+/* Right Side Image */
+.booking-image {
+  width: 100%;
+  height: 400px;
+  border-radius: 0px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .booking-form {
+    text-align: center;
+  }
+
+  .booking-image {
+    display: none;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #f8f8f8;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.email {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* Instagram Section */
+
+.image-gallery {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  align-items: center; /* Center images horizontally */
+  justify-content: center; /* Center images vertically (if needed) */
+  gap: 10px; /* Space between images */
+  margin-top: 10px;
+  overflow: hidden; /* Hide overflowing images */
+  position: relative;
+  text-align: center; /* Ensures inline elements like <img> are centered */
+}
+
+.gallery-img {
+  /* width: 125px;  */
+  height: 125px; /* Ensure uniform height */
+  object-fit: cover; /* Prevent stretching */
+  border-radius: 0px; /* Optional: rounded corners */
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Animation for fading in images */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Initially hide the second set of images */
+.image-set {
+  display: none;
+}
+
+/* Animation for image set transition */
+@keyframes imageSetTransition {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+/* Add transition effect to hide the images */
+.image-set.fade-out {
+  animation: imageSetTransition 1s ease-out forwards;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 20px;
+  margin-bottom: 0; /* Ensures no bottom margin */
+  padding-bottom: 0; /* Prevents extra space from padding */
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+.footer-bottom p {
+  margin-bottom: 0;
+}
+
+.footer-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-bottom p {
+  background-color: white;
+  color: rgb(6, 6, 6);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .instagram-images img {
+    width: 80px;
+    height: 80px;
+  }
+  .vertical-line {
+    display: none;
+  }
+  .contact {
+    padding-left: 0px !important;
+  }
+  .image-set img:nth-child(n + 4) {
+    display: none; /* Hides images after the 3rd one */
+  }
+  .gallery-img {
+    width: 125px !important;
+  }
+}
+.last {
+  text-align: center; /* Center the text */
+  background-color: #000000; /* Light background */
+  padding: 5px 0; /* Add some space above and below */
+  font-size: 16px;
+  color: white; /* Dark gray text */
+  font-weight: 500;
+  position: relative; /* Keeps it at the bottom without fixing */
+  width: 100%;
+}
+.last p{
+  margin-top:8px !important;
+  margin-bottom:8px !important;
+}
+
+.fas.fa-phone-alt {
+  transform: rotate(450deg);
+  display: inline-block; /* Ensures proper rotation */
+}
+
+.whatsapp-icon {
+  position: fixed;   /* Stays in place even when scrolling */
+  bottom: 20px;      /* 20px from the bottom */
+  left: 20px;        /* 20px from the left */
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;      /* Icon color */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular shape */
+  font-size: 35px;   /* Icon size */
+  text-decoration: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;     /* Keep it above other elements */
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.2); /* Smooth hover effect */
+}
+.navbar-toggler{
+  border-radius: 0px;
+}
+.lastcolor{
+  color:#5da0d8
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #292929;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+}
+.fa-chevron-up{
+  font-size: smaller;
+}
+.vertical-line {
+  width: 2px;
+  background-color: #c1c1c1;
+  height: 80%; /* Adjusts dynamically */
+  min-height: 150px; /* Ensures visibility */
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns items to the left */
+  padding-left: 90px; /* Removes default padding */
+  font-size: 1.2rem;
+}
+.contact p {
+  margin: 10px 0; /* Adds spacing between the items */
+  display: flex;
+  align-items: center; /* Aligns the icon and text vertically */
+}
+
+.contact i {
+  margin-right: 10px; /* Adds space between the icon and text */
+  color: #070707; /* Color for the icons */
+}
+.fab{
+  font-size: xx-large;
+}
+
+ .gallery-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+ 
+} 
+
+.portfolio-item {
+  margin-bottom: 20px;
+}
+
+.small-img {
+  width: 90%;
+  height: 300px; /* Adjust size */
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.large-img {
+  width: 190%;
+  height: 600px; /* Larger center image */
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+h5 {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+
+.photography{
+  background-color: #fff;
+  padding: 40px 40px;
+}
+
+.our-works{
+  background-color: #f8f8f8;
+  padding: 40px 40px;
+}
