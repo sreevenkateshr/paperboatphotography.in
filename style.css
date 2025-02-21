@@ -1093,6 +1093,9 @@ a {
   .gallery-img {
     width: 125px !important;
   }
+  .mx-auto{
+    margin-left: 5px!important;
+  }
 }
 .last {
   text-align: center; /* Center the text */
@@ -1136,6 +1139,24 @@ a {
 .whatsapp-icon:hover {
   transform: scale(1.2); /* Smooth hover effect */
 }
+.whatsapp-icon:before {
+  animation: _pulse 1.2s infinite;
+  border-color: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
+  content: "";
+  height: 50px;
+  position: absolute;
+  width: 50px;  
+} 
+@keyframes _pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 101, .75);
+  }
+  100% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
+  }
+}
 .navbar-toggler{
   border-radius: 0px;
 }
@@ -1155,11 +1176,10 @@ a {
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  display: none; /* Hidden by default */
+  display: none; 
   justify-content: center;
   align-items: center;
   z-index: 1000; 
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -1167,6 +1187,7 @@ a {
   background-color: #000000;
   transform: scale(1.1);
 }
+
 .fa-chevron-up{
   font-size: smaller;
 }
