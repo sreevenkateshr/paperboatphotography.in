@@ -1003,7 +1003,6 @@ a {
 }
 
 .gallery-img {
-  /* width: 125px;  */
   height: 125px; /* Ensure uniform height */
   object-fit: cover; /* Prevent stretching */
   border-radius: 0px; /* Optional: rounded corners */
