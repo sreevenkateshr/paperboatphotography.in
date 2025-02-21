@@ -942,6 +942,7 @@ a {
   background-color: #f8f8f8;
   padding-top: 20px;
   text-align: center;
+  background-image: linear-gradient(180deg, #f2e3de 0%, #ffffff 100%) !important;
 }
 
 .footer-container {
@@ -1136,9 +1137,9 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 
-.whatsapp-icon:hover {
-  transform: scale(1.2); /* Smooth hover effect */
-}
+/* .whatsapp-icon:hover {
+  transform: scale(1.2);
+} */
 .whatsapp-icon:before {
   animation: _pulse 1.2s infinite;
   border-color: inherit;
@@ -1164,7 +1165,7 @@ a {
   color:#5da0d8
 }
 
-#scrollToTopBtn {
+/* #scrollToTopBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1186,6 +1187,38 @@ a {
 #scrollToTopBtn:hover {
   background-color: #000000;
   transform: scale(1.1);
+} */
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+#scrollToTopBtn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#progress {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.3s;
 }
 
 .fa-chevron-up{
