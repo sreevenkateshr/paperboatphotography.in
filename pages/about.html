@@ -598,6 +598,34 @@
   font-weight: normal !important;
 } 
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #292929;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+}
+.fa-chevron-up{
+  font-size: smaller;
+}
+
     </style>
   </head>
   <body>
@@ -874,6 +902,9 @@
       <a href="https://wa.me/your-number" target="_blank" class="whatsapp-icon">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <button id="scrollToTopBtn">
+      <i class="fa-sharp fa-solid fa-chevron-up"></i>
+  </button>
 
     <!-- Bootstrap JS -->
   
@@ -934,6 +965,23 @@ function switchImages() {
 
 // Set the interval to switch images every 3 seconds
 setInterval(switchImages, 3000);
+
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show the button when scrolling down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = "flex";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+});
+
+// Scroll to the top when clicking the button
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 </script>
   </body>
 </html>

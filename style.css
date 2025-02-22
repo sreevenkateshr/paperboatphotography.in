@@ -1,6 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/rightman-signature");
 h2 {
-  font-family: "Rightman Signature", sans-serif;
+  font-family: "Send Flowers", serif;
 }
 /* Hero Section */
 .hero-section {
@@ -435,10 +435,14 @@ a {
   
 }
 .animated-text {
+  
+  font-style: italic;
+  color: #666;
+  margin-bottom: 5px;
   font-size: 1.5rem;
   line-height: 1.8;
   margin: 10px 0;
-  color: #777;
+  
   opacity: 0; /* Start with hidden text */
   transform: translateY(20px); /* Start with slight offset */
   transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Apply smooth transition */
@@ -1132,7 +1136,34 @@ a {
   z-index: 1000;     /* Keep it above other elements */
   transition: transform 0.3s ease-in-out;
 }
-
+.whatsapp-icon:before {
+  animation: _pulse 1.2s infinite;
+  border-color: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
+  content: "";
+  height: 50px;
+  position: absolute;
+  width: 50px;  
+} 
+@keyframes _pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 101, .75);
+  }
+  100% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
+  }
+}
+@media (max-width: 768px) {
+  .whatsapp-icon {
+    bottom: 20px;
+    left: 20px;
+  }
+  #scrollToTopBtn {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+}
 .whatsapp-icon:hover {
   transform: scale(1.2); /* Smooth hover effect */
 }
