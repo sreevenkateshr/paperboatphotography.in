@@ -946,6 +946,7 @@ a {
   background-color: #f8f8f8;
   padding-top: 20px;
   text-align: center;
+  background-image: linear-gradient(180deg, #f2e3de 0%, #ffffff 100%) !important;
 }
 
 .footer-container {
@@ -1006,7 +1007,6 @@ a {
 }
 
 .gallery-img {
-  /* width: 125px;  */
   height: 125px; /* Ensure uniform height */
   object-fit: cover; /* Prevent stretching */
   border-radius: 0px; /* Optional: rounded corners */
@@ -1097,6 +1097,9 @@ a {
   .gallery-img {
     width: 125px !important;
   }
+  .mx-auto{
+    margin-left: 5px!important;
+  }
 }
 .last {
   text-align: center; /* Center the text */
@@ -1136,34 +1139,7 @@ a {
   z-index: 1000;     /* Keep it above other elements */
   transition: transform 0.3s ease-in-out;
 }
-.whatsapp-icon:before {
-  animation: _pulse 1.2s infinite;
-  border-color: inherit;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
-  content: "";
-  height: 50px;
-  position: absolute;
-  width: 50px;  
-} 
-@keyframes _pulse {
-  0% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 101, .75);
-  }
-  100% {
-      box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
-  }
-}
-@media (max-width: 768px) {
-  .whatsapp-icon {
-    bottom: 20px;
-    left: 20px;
-  }
-  #scrollToTopBtn {
-    bottom: 20px !important;
-    right: 20px !important;
-  }
-}
+
 .whatsapp-icon:hover {
   transform: scale(1.2); /* Smooth hover effect */
 }
@@ -1174,7 +1150,7 @@ a {
   color:#5da0d8
 }
 
-#scrollToTopBtn {
+/* #scrollToTopBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1186,18 +1162,50 @@ a {
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  display: none; /* Hidden by default */
+  display: none; 
   justify-content: center;
   align-items: center;
   z-index: 1000; 
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
   background-color: #000000;
   transform: scale(1.1);
+} */
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.3s;
 }
+
+#scrollToTopBtn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#progress {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.3s;
+}
+
 .fa-chevron-up{
   font-size: smaller;
 }
