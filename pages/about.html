@@ -716,7 +716,7 @@
       <div class="container">
           <!-- Center Logo -->
           <a class="navbar-brand mx-auto d-lg-none" href="#">
-              <img src="/PB Logo.png" alt="Logo" height="50">
+              <img src="/WEB PB2.png" alt="Logo" height="50">
           </a>
   
           <!-- Navbar Toggler for Mobile -->
@@ -734,7 +734,7 @@
   
               <!-- Center Logo for Desktop -->
               <a class="navbar-brand d-none d-lg-block mx-auto" href="#">
-                  <img src="/PB Logo.png" alt="Logo" height="50">
+                  <img src="/WEB PB2.png" alt="Logo" height="50">
               </a>
   
               <!-- Right Side Nav Links -->
@@ -1033,33 +1033,33 @@
     checkScroll(); // Initial check
 });
 
-let currentSet = 1; // Track which image set is currently visible
+// let currentSet = 1; // Track which image set is currently visible
 
-function switchImages() {
-    const firstSet = document.getElementById('image-set1');
-    const secondSet = document.getElementById('image-set2');
+// function switchImages() {
+//     const firstSet = document.getElementById('image-set1');
+//     const secondSet = document.getElementById('image-set2');
 
-    if (currentSet === 1) {
-        firstSet.classList.add('fade-out'); // Add fade-out animation to the first set
-        setTimeout(() => {
-            firstSet.style.display = 'none'; // Hide the first set
-            secondSet.style.display = 'block'; // Show the second set
-            secondSet.classList.remove('fade-out'); // Remove fade-out animation
-        }, 1000); // Match the duration of the fade-out animation
-        currentSet = 2; // Switch to the second set
-    } else {
-        secondSet.classList.add('fade-out'); // Add fade-out animation to the second set
-        setTimeout(() => {
-            secondSet.style.display = 'none'; // Hide the second set
-            firstSet.style.display = 'block'; // Show the first set
-            firstSet.classList.remove('fade-out'); // Remove fade-out animation
-        }, 1000); // Match the duration of the fade-out animation
-        currentSet = 1; // Switch back to the first set
-    }
-}
+//     if (currentSet === 1) {
+//         firstSet.classList.add('fade-out'); // Add fade-out animation to the first set
+//         setTimeout(() => {
+//             firstSet.style.display = 'none'; // Hide the first set
+//             secondSet.style.display = 'block'; // Show the second set
+//             secondSet.classList.remove('fade-out'); // Remove fade-out animation
+//         }, 1000); // Match the duration of the fade-out animation
+//         currentSet = 2; // Switch to the second set
+//     } else {
+//         secondSet.classList.add('fade-out'); // Add fade-out animation to the second set
+//         setTimeout(() => {
+//             secondSet.style.display = 'none'; // Hide the second set
+//             firstSet.style.display = 'block'; // Show the first set
+//             firstSet.classList.remove('fade-out'); // Remove fade-out animation
+//         }, 1000); // Match the duration of the fade-out animation
+//         currentSet = 1; // Switch back to the first set
+//     }
+// }
 
-// Set the interval to switch images every 3 seconds
-setInterval(switchImages, 3000);
+// // Set the interval to switch images every 3 seconds
+// setInterval(switchImages, 3000);
 
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
