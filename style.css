@@ -765,7 +765,7 @@ a {
   align-items: center;
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -1196,8 +1196,8 @@ a {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border: none;
   background-color: white;
   border-radius: 50%;
@@ -1214,8 +1214,8 @@ a {
 
 #scrollToTopBtn svg {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2;
+  left: -2;
 }
 
 #progress {
@@ -1269,7 +1269,7 @@ a {
 
 .small-img {
   width: 90%;
-  height: 300px; /* Adjust size */
+  height: 327px; /* Adjust size */
   object-fit: cover;
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1303,32 +1303,32 @@ h5 {
 .wedding-section {
   position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  min-height: 70vh;
-  padding: 50px 50px;
+  max-height: 50vh;
+  padding: 40px 40px;
   background-color: #f8f8f8;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 140px;
+  margin-bottom: 140px;
 }
 
 /* Image Styling */
 .wedding-image {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40%; /* Adjust width for better balance */
-  height: 120%; /* Extend the image slightly above and below */
+  position: relative;
+  width: 40%; /* Adjust width for balance */
+  height: auto; /* Prevents distortion */
   z-index: 1;
   padding-left: 120px;
+  margin-top: -80px; /* Moves the image slightly above the section */
+  margin-bottom: -80px; /* Moves the image slightly below the section */
 }
 
 .wedding-image img {
   width: 100%;
-  height: 100%;
+  height: auto; /* Maintains aspect ratio */
   object-fit: cover; /* Ensures no distortion */
   border-radius: 0px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: block; /* Removes extra spacing */
 }
 
 /* Content Section (without box) */
@@ -1351,38 +1351,58 @@ h5 {
   color: #555;
 }
 
-
 @media (max-width: 768px) {
   .wedding-section {
-      flex-direction: column;
-      padding: 20px;
+    flex-direction: column; /* Stack elements */
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-height: 130vh;
   }
 
   .wedding-image {
-      position: relative;
-      left: 0;
-      top: 0;
-      transform: translateY(0);
-      width: 100%;
-      height: auto;
-      padding-left: 0;
-      margin-bottom: 20px;
+    width: 100%; /* Full width */
+    padding-left: 0;
+    margin-top: -10px; /* Slightly above */
+    /* margin-bottom: -10px; Slightly below */
+  }
+
+  .wedding-image img {
+    width: 100%;
+    height: auto;
   }
 
   .wedding-content {
-      max-width: 100%;
-      padding: 20px;
+    width: 100%;
+    padding: 20px;
+    max-width: 100%;
+    text-align: left;
   }
 
   .wedding-content h1 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 
   .wedding-content p {
-      font-size: 1rem;
+    font-size: 1rem;
+  }
+  .small-img {
+    width: 90%;
+    height: 327px; /* Adjust size */
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .large-img {
+    width: 90%;
+    height: 327px; /* Larger center image */
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
 }
-
 
 /* Full-Screen Image */
 .full-screen-image {
@@ -1401,3 +1421,6 @@ h5 {
 
 
 
+.custom-container{
+  max-width: 1200px;
+}
