@@ -1143,6 +1143,24 @@ a {
 .whatsapp-icon:hover {
   transform: scale(1.2); /* Smooth hover effect */
 }
+.whatsapp-icon:before {
+  animation: _pulse 1.2s infinite;
+  border-color: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
+  content: "";
+  height: 50px;
+  position: absolute;
+  width: 50px;  
+} 
+@keyframes _pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 101, .75);
+  }
+  100% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
+  }
+}
 .navbar-toggler{
   border-radius: 0px;
 }
