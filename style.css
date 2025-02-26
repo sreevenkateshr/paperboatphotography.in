@@ -205,6 +205,7 @@ h2 {
 
 .about-text p {
   font-size: 1.2rem;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   color: #555;
   animation: fadeInUp 1s ease-out 0.5s forwards;
   text-align: justify;
@@ -474,6 +475,7 @@ a {
   align-items: center;
   height: 400px;
   gap: 20px;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 /* Ensuring All Images & Text Box are Equal */
@@ -594,6 +596,7 @@ a {
   background: #fff;
   padding: 80px 20px;
   text-align: center;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 .button-service{
   border: none;
@@ -750,6 +753,7 @@ a {
   font-weight: bold;
   color: #333;
   margin-bottom: 30px;
+  
 }
 
 /* Left Side Text */
@@ -757,6 +761,7 @@ a {
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 /* Testimonial Card */
@@ -784,12 +789,14 @@ a {
   font-style: italic;
   color: #666;
   margin-bottom: 5px;
+ 
 }
 
 .testimonial-content h4 {
   font-size: 1.3rem;
   font-weight: 600;
   color: #333;
+  
 }
 
 /* Remove Vertical Animation */
@@ -1265,6 +1272,8 @@ a {
 
 .portfolio-item {
   margin-bottom: 20px;
+  font-family: "Playfair Display SC", Georgia, "Times New Roman", serif;
+  font-weight: 500;
 }
 
 .small-img {
@@ -1310,6 +1319,7 @@ h5 {
   background-color: #f8f8f8;
   margin-top: 140px;
   margin-bottom: 140px;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 /* Image Styling */
