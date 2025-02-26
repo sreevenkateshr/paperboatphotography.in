@@ -1055,7 +1055,7 @@ a {
 
 /* Footer Bottom */
 .footer-bottom {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 0; /* Ensures no bottom margin */
   padding-bottom: 0; /* Prevents extra space from padding */
   text-align: center;
@@ -1347,6 +1347,7 @@ h5 {
   z-index: 2;
   position: relative;
   max-width: 50%;
+  margin-left: 50px;
 }
 
 .wedding-content h1 {
