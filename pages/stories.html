@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+           
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+/* General Page Styling */
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Portfolio Section */
+.portfolio-detail {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+/* Container Styling */
+.portfolio-container {
+    width: 80%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Title */
+.portfolio-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Main Image */
+.main-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Image Grid - Two Images in a Row */
+.img-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.img-container img {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Different Widths for Images */
+.img-lg {
+    width: 65%;
+}
+
+.img-sm {
+    width: 35%;
+}
+
+/* Our Works Section */
+.our-works {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.our-works h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Image Grid for "Our Works" */
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.img-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Keep Grid Layout on All Screens */
+@media (max-width: 992px) {
+    .portfolio-container {
+        width: 90%;
+    }
+
+    .img-container {
+        flex-wrap: wrap; /* Prevents stacking */
+        justify-content: center;
+    }
+
+    .img-lg, .img-sm {
+        width: 48%; /* Keep proportions on smaller screens */
+    }
+
+    .img-grid {
+        grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        width: 95%;
+    }
+
+    .img-container {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .img-lg, .img-sm {
+        width: 48%; /* Maintain side-by-side layout */
+    }
+
+    .img-grid img {
+        
+        height: 150px; /* Prevent stacking on mobile */
+    }
+
+    .main-img {
+        height: 350px;
+    }
+}
+
+
+
+.navbar {
+        background: transparent;
+        transition: background 0.3s ease-in-out;
+      }
+
+      /* Navbar Brand Logo */
+      .navbar .navbar-brand img {
+        filter: brightness(0) invert(1); /* White logo */
+        transition: filter 0.3s ease-in-out;
+      }
+
+      /* Navbar Links - Default White */
+      .navbar .nav-link {
+        color: white !important;
+        transition: color 0.3s ease-in-out;
+        position: relative;
+        padding: 10px 15px;
+      }
+
+      /* Sticky Navbar Effect */
+      .navbar.scrolled {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Navbar Links - Change to Black on Scroll */
+      .navbar.scrolled .nav-link {
+        color: black !important;
+      }
+
+      /* Restore Original Logo When Scrolled */
+      .navbar.scrolled .navbar-brand img {
+        filter: none;
+      }
+      .navbar-nav {
+        gap: 20px;
+      }
+      /* Mobile Navbar Center Alignment */
+      @media (max-width: 768px) {
+        .navbar-nav {
+          text-align: center;
+          gap: 0px;
+        }
+        .custom-class {
+          display: block; /* Make the button block-level to allow centering */
+          margin: 0 auto;
+        }
+      }
+
+      /* Underline Animation on Hover */
+      .navbar-nav .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 1.2rem; /* Adjust text size as needed */
+        padding: 10px 15px;
+      }
+
+      /* Underline Animation on Hover */
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 7px;
+        width: 0;
+        height: 3px;
+        background-color: #fff;
+        transition: width 0.5s ease-in-out;
+        transform: translateX(-50%);
+      }
+      .navbar.scrolled .nav-link::after
+{
+  background-color: #000;
+}
+      /* Expand Underline on Hover - Matches text width */
+      .navbar-nav .nav-link:hover::after {
+        width: 80%; /* Now matches text width only */
+      }
+
+      /* Click Line Animation Effect */
+      .navbar-nav .nav-link:focus::after {
+        width: 80%;
+        background-color: #589cd3; /* Change color when clicked */
+      }
+
+      /* Mobile Navbar Adjustments */
+      @media (max-width: 768px) {
+        .navbar-nav .nav-link {
+          font-size: 1.2rem; /* Maintain readability */
+        }
+        .navbar-nav .nav-link::after {
+          bottom: 5px; /* Keep line close to text in mobile view */
+        }
+        .navbar-toggler {
+          border-radius: 0px;
+        }
+        .custom-class1 {
+          margin-top: 20px;
+          font-size: 1.4rem;
+        }
+      }
+
+      .contact-banner {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        background: url("/imgs/img3.png") no-repeat center center/cover;
+        display: flex;
+        align-items: flex-end; /* Ensures title appears after image */
+        justify-content: center;
+        padding-bottom: 30px; /* Space for title */
+      }
+
+      /* Dark Overlay */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+      }
+
+      /* Title Styling */
+      .title {
+        position: relative;
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        z-index: 2;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .title {
+          font-size: 2rem;
+        }
+        .contact-banner {
+          height: 300px;
+        }
+      }
+      footer {
+    background-color: #f8f8f8;
+    padding-top: 20px;
+    text-align: center;
+    background-image: linear-gradient(180deg, #f2e3de 0%, #ffffff 100%) !important;
+}
+
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+      }
+
+      .footer-section {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+      }
+
+      .footer-section h4 {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+
+      .email {
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .quote {
+        font-style: italic;
+        font-size: 16px;
+      }
+
+      .social-icons a {
+        color: black;
+        font-size: 20px;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      .social-icons a:hover {
+        opacity: 0.7;
+      }
+
+      /* Instagram Section */
+
+      .image-gallery {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images horizontally */
+        justify-content: center; /* Center images vertically (if needed) */
+        gap: 10px; /* Space between images */
+        margin-top: 10px;
+        overflow: hidden; /* Hide overflowing images */
+        position: relative;
+        text-align: center; /* Ensures inline elements like <img> are centered */
+      }
+
+      .gallery-img {
+        /* width: 125px;  */
+        height: 125px; /* Ensure uniform height */
+        object-fit: cover; /* Prevent stretching */
+        border-radius: 0px; /* Optional: rounded corners */
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+
+      /* Animation for fading in images */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Initially hide the second set of images */
+      .image-set {
+        display: none;
+      }
+
+      /* Animation for image set transition */
+      @keyframes imageSetTransition {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+      }
+
+      /* Add transition effect to hide the images */
+      .image-set.fade-out {
+        animation: imageSetTransition 1s ease-out forwards;
+      }
+
+      /* Footer Bottom */
+      .footer-bottom {
+        margin-top: 0px;
+        margin-bottom: 0; /* Ensures no bottom margin */
+        padding-bottom: 0; /* Prevents extra space from padding */
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+      }
+      .footer-bottom p {
+        margin-bottom: 0;
+      }
+
+      .footer-links a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: black;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+      .footer-bottom p {
+        background-color: white;
+        color: rgb(6, 6, 6);
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .instagram-images img {
+          width: 80px;
+          height: 80px;
+        }
+        .vertical-line {
+          display: none;
+        }
+        .contact {
+          padding-left: 0px !important;
+        }
+        .image-set img:nth-child(n + 4) {
+          display: none; /* Hides images after the 3rd one */
+        }
+        .gallery-img {
+          width: 125px !important;
+        }
+      }
+      .vertical-line {
+    width: 2px;
+    background-color: #c1c1c1;
+    height: 80%;
+    min-height: 150px;
+}
+.contact {
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 90px;
+    font-size: 1.2rem;
+}
+.fas.fa-phone-alt {
+  transform: rotate(450deg);
+  display: inline-block; /* Ensures proper rotation */
+}
+
+
+
+      .whatsapp-icon {
+  position: fixed;   /* Stays in place even when scrolling */
+  bottom: 20px;      /* 20px from the bottom */
+  left: 20px;        /* 20px from the left */
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;      /* Icon color */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular shape */
+  font-size: 35px;   /* Icon size */
+  text-decoration: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;     /* Keep it above other elements */
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.2); /* Smooth hover effect */
+}
+.whatsapp-icon:before {
+  animation: _pulse 1.2s infinite;
+  border-color: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
+  content: "";
+  height: 50px;
+  position: absolute;
+  width: 50px;  
+} 
+@keyframes _pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 101, .75);
+  }
+  100% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
+  }
+}
+.navbar-toggler{
+  border-radius: 0px;
+}
+.lastcolor{
+  color:#5da0d8
+}
+
+/* #scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #292929;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+} */
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+#scrollToTopBtn svg {
+  position: absolute;
+  top: -2;
+  left: -2;
+}
+
+#progress {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.3s;
+}
+
+.fa-chevron-up{
+  font-size: smaller;
+}
+.fab{
+  font-size: xx-large;
+}
+
+
+.full-screen-image {
+  width: 100%;
+  height: 40vh; /* Full viewport height */
+  overflow: hidden;
+  position: relative;
+}
+
+.full-screen-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  object-position: center; /* Centers the image */
+}
+
+@media screen and (max-width: 768px) {
+  .full-screen-image {
+      height: 20vh; /* Adjust height for mobile devices */
+  }
+  
+}
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <!-- Center Logo -->
+          <a class="navbar-brand mx-auto d-lg-none" href="#">
+            <img src="/WEB PB2.png" alt="Logo" height="50" />
+          </a>
+  
+          <!-- Navbar Toggler for Mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarNav"
+          >
+            <!-- Left Side Nav Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+            </ul>
+  
+            <!-- Center Logo for Desktop -->
+            <a class="navbar-brand d-none d-lg-block mx-auto" href="#">
+              <img src="/WEB PB2.png" alt="Logo" height="50" />
+            </a>
+  
+            <!-- Right Side Nav Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <section class="contact-banner">
+        <div class="overlay"></div>
+        <h1 class="title">Stories</h1>
+      </section>
+
+<section class="portfolio-detail">
+    <div class="portfolio-container">
+        <!-- Title -->
+        <div class="text-center mb-4">
+            <h2 class="portfolio-title">Rachel & Jonathan</h2>
+            <p class="text-muted">Date: 28 July 2023 | Category: Wedding</p>
+        </div>
+
+        <!-- Main Image -->
+        <div>
+            <img src="/imgs/1 (2).png" class="main-img" alt="Bride and Groom">
+        </div>
+
+        <!-- Image Grid -->
+        <div class="img-container">
+            <img src="/imgs/PRVN7483.jpg" class="img-lg" alt="Wedding Moment">
+            <img src="/imgs/PRVN7294.jpg" class="img-sm" alt="Bride & Groom">
+        </div>
+
+        <div class="img-container">
+            <img src="/imgs/2 (3).png" class="img-sm" alt="Bride Holding Flowers">
+            <img src="/imgs/PRVN7461.jpg" class="img-lg" alt="Wedding Rings">
+        </div>
+
+        <div class="img-container">
+            <img src="/imgs/PRVN7737.jpg" class="img-lg" alt="Couple Dancing">
+            <img src="/imgs/PRVN8603.jpg" class="img-sm" alt="Bride in Car">
+        </div>
+
+        
+    
+        <!-- Our Works Section -->
+        <div class="our-works">
+            <h2>Our Works</h2>
+        </div>
+    
+        <!-- Image Grid -->
+        <div class="img-grid">
+            <img src="/imgs/PRVN7946.jpg" alt="Work 1">
+            <img src="/imgs/PRVN8603.jpg" alt="Work 2">
+            <img src="/imgs/PRVN8607.jpg" alt="Work 3">
+            <img src="/imgs/PRVN8603.jpg" alt="Work 4">
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>GET IN TOUCH</h4>
+        <div class="contact">
+          <p><i class="fas fa-phone-alt"></i> +91 6374926377</p>
+          <p>
+            <i class="fas fa-envelope"></i> paperboatphotography.in@gmail.com
+          </p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
+          </p>
+        </div>
+      </div>
+      <div class="vertical-line mx-4"></div>
+      <div class="footer-section">
+        <p class="quote">
+          "Photography takes an instant out of time, altering life by holding it still." – Dorothea Lange
+        </p>
+      </div>
+      <div class="vertical-line mx-4"></div>
+      <div class="footer-section">
+        <h4>CONNECT US</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/paperboatphotography.in/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/194hGb7YSV/"><i class="fab fa-facebook"></i></a>
+          <a href="https://pin.it/Tiw7FmzFK"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="full-screen-image">
+      <img src="/imgs/img1.png" alt="Full Screen Image" class="img-fluid">
+  </div>
+<!-- 
+    <div class="image-gallery">
+      <div class="image-set" id="image-set1">
+        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
+        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
+        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
+        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
+        <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
+        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
+      </div>
+      <div class="image-set" id="image-set2">
+        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
+        <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
+        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
+        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
+        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
+        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
+      </div>
+    </div> -->
+
+    <div class="footer-bottom">
+      <!-- <div class="footer-links">
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div> -->
+      <p>
+        Copyright &copy; Paperboat 2025 - All
+        rights reserved | Designed and Developed by
+        <span class="lastcolor">Sherlin A G</span>
+      </p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/your-number" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<button id="scrollToTopBtn">
+    <svg width="50" height="50">
+        <circle cx="25" cy="25" r="20" stroke-width="5" fill="none" stroke="#ccc"></circle>
+        <circle id="progress" cx="25" cy="25" r="20" stroke-width="5" fill="none" stroke="black"
+            stroke-dasharray="125" stroke-dashoffset="125"></circle>
+    </svg>
+    <i class="fa-sharp fa-solid fa-chevron-up"></i>
+</button>
+<script>
+    window.addEventListener("scroll", function () {
+      var navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show the button when scrolling down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = "flex";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+});
+
+// Scroll to the top when clicking the button
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollToTopButton = document.getElementById("scrollToTopBtn");
+  const progressCircle = document.getElementById("progress");
+  const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const circleLength = 125; 
+
+  window.addEventListener("scroll", () => {
+      let scrollPercentage = window.scrollY / totalScrollHeight;
+      let strokeOffset = circleLength * (1 - scrollPercentage);
+
+      progressCircle.style.strokeDashoffset = strokeOffset;
+
+      if (window.scrollY > 100) {
+          scrollToTopButton.style.opacity = 1;
+      } else {
+          scrollToTopButton.style.opacity = 0;
+      }
+  });
+
+  scrollToTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

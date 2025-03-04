@@ -1308,96 +1308,67 @@ h5 {
   padding: 40px 40px;
 }
 
-
 .wedding-section {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-height: 50vh;
-  padding: 40px 40px;
-  background-color: #f8f8f8;
-  margin-top: 140px;
-  margin-bottom: 140px;
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-}
-
-/* Image Styling */
-.wedding-image {
-  position: relative;
-  width: 40%; /* Adjust width for balance */
-  height: auto; /* Prevents distortion */
-  z-index: 1;
-  padding-left: 120px;
-  margin-top: -80px; /* Moves the image slightly above the section */
-  margin-bottom: -80px; /* Moves the image slightly below the section */
-}
-
-.wedding-image img {
   width: 100%;
-  height: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Ensures no distortion */
-  border-radius: 0px;
-  display: block; /* Removes extra spacing */
+  height: 90vh; /* Increased section height */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.4) 40%, rgba(248, 241, 235, 1) 70%),
+              url('/imgs/PRVN8602.jpg') no-repeat center right;
+  background-size: cover;
 }
 
-/* Content Section (without box) */
-.wedding-content {
-  padding: 40px;
+/* Text Content */
+.content1 {
+  max-width: 600px;
+  padding-left: 50px;
   z-index: 2;
-  position: relative;
-  max-width: 50%;
-  margin-left: 50px;
 }
 
-.wedding-content h1 {
-  font-size: 2.5rem;
+.text-box1 {
+  background: rgba(255, 255, 255, 0.75); /* Light semi-transparent background */
+  padding: 60px 40px; /* Increased height */
+  min-height: 300px; 
+  max-width: 500px;/* Ensure proper height */
+  border-radius: 0px;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(90, 74, 66, 0.5); /* Inner border with soft brown color */
+}
+
+/* Title & Paragraph Styling */
+.text-box1 h2 {
+  font-size: 32px; /* Slightly bigger font */
   font-weight: bold;
-  margin-bottom: 20px;
+  font-family: 'Cursive', serif;
+  margin-bottom: 15px;
+  color: #5a4a42; /* Elegant brown shade */
 }
 
-.wedding-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #555;
+.text-box1 p {
+  font-size: 18px;
+  color: #6d5f52; /* Soft grayish-brown for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wedding-section {
+      background: url('/imgs/PRVN8603.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+  }
+  .content1 {
+      padding-left: 20px;
+  }
+  .text-box1 {
+      text-align: center;
+      padding: 40px 30px; /* Reduce padding for smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
-  .wedding-section {
-    flex-direction: column; /* Stack elements */
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    max-height: 130vh;
-  }
-
-  .wedding-image {
-    width: 100%; /* Full width */
-    padding-left: 0;
-    margin-top: -10px; /* Slightly above */
-    /* margin-bottom: -10px; Slightly below */
-  }
-
-  .wedding-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .wedding-content {
-    width: 100%;
-    padding: 20px;
-    max-width: 100%;
-    text-align: left;
-  }
-
-  .wedding-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .wedding-content p {
-    font-size: 1rem;
-  }
+  
   .small-img {
     width: 90%;
     height: 327px; /* Adjust size */
@@ -1435,3 +1406,18 @@ h5 {
 .custom-container{
   max-width: 1200px;
 }
+
+.connector-img {
+  position: relative;
+  text-align: right; /* Aligns the image container to the right */
+  margin-top: -50px; 
+  margin-bottom: -50px; /* Adjust as needed */
+}
+
+.connector-img img {
+  width: 120px; /* Adjust size */
+  height: auto;
+  display: block; /* Ensures visibility */
+  margin-left: auto; /* Pushes image to the right */
+}
+
