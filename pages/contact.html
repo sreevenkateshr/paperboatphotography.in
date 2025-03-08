@@ -17,6 +17,12 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+     @import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap'); 
+      
+      h1, h2{
+      
+        font-family: "Send Flowers", serif;
+      }
       .navbar {
         background: transparent;
         transition: background 0.3s ease-in-out;
@@ -626,13 +632,17 @@ h4 {
 
         <!-- Navbar Toggler for Mobile -->
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        id="menu-toggle"
+      >
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
 
         <div
           class="collapse navbar-collapse justify-content-between"
@@ -647,7 +657,7 @@ h4 {
               <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pricing.html">Pricing</a>
+              <a class="nav-link" href="portfolio.html">Pricing</a>
             </li>
           </ul>
 
@@ -688,7 +698,7 @@ h4 {
                   <div class="contact-card">
                       <!-- Logo -->
                       <div class="contact-logo">
-                          <img src="/imgs/logo.png" alt="Paperboat Wedding Photography">
+                          <img src="/WEB PB2.png" alt="Paperboat Wedding Photography">
                       </div>
 
                       <h3 class="contact-title">We’d love to hear from you</h3>
@@ -712,7 +722,7 @@ h4 {
                           1st Floor Asset Anchorage Building,<br>
                           Mundupalam Avenue Rd,<br>
                           Sakthan Thampuran Nagar, Anchery,<br>
-                          Thrissur, Kerala - 680006
+                          Thrissur, Tamil Nadu- 680006
                       </p>
                   </div>
               </div>
@@ -951,6 +961,58 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+      var navLinks = document.querySelectorAll(".nav-link");
+      var navbarCollapse = document.querySelector(".navbar-collapse");
+
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: true,
+          });
+        });
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const icon = menuToggle.querySelector("i");
+      const navbarNav = document.getElementById("navbarNav");
+      const navLinks = document.querySelectorAll(".nav-link"); // Select all nav items
+
+      // Toggle menu icon on click
+      menuToggle.addEventListener("click", function () {
+        if (icon.classList.contains("fa-bars")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times"); // Change to close icon
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars"); // Change back to menu icon
+        }
+      });
+
+      // Close menu on outside click
+      document.addEventListener("click", function (event) {
+        if (
+          !menuToggle.contains(event.target) &&
+          !navbarNav.contains(event.target)
+        ) {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+          navbarNav.classList.remove("show"); // Ensure Bootstrap collapses menu
+        }
+      });
+
+      // Close menu when clicking on a nav-item
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+          navbarNav.classList.remove("show"); // Hide menu
+        });
+      });
+    });
     </script>
   </body>
 </html>

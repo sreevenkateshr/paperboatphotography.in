@@ -1,4 +1,55 @@
 // Create an intersection observer to watch when the section enters the viewport
+    document.addEventListener("DOMContentLoaded", function () {
+      var navLinks = document.querySelectorAll(".nav-link");
+      var navbarCollapse = document.querySelector(".navbar-collapse");
+
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: true,
+          });
+        });
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const icon = menuToggle.querySelector("i");
+      const navbarNav = document.getElementById("navbarNav");
+      const navLinks = document.querySelectorAll(".nav-link"); // Select all nav items
+
+      // Toggle menu icon on click
+      menuToggle.addEventListener("click", function () {
+        if (icon.classList.contains("fa-bars")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times"); // Change to close icon
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars"); // Change back to menu icon
+        }
+      });
+
+      // Close menu on outside click
+      document.addEventListener("click", function (event) {
+        if (
+          !menuToggle.contains(event.target) &&
+          !navbarNav.contains(event.target)
+        ) {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+          navbarNav.classList.remove("show"); // Ensure Bootstrap collapses menu
+        }
+      });
+
+      // Close menu when clicking on a nav-item
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+          navbarNav.classList.remove("show"); // Hide menu
+        });
+      });
+    });
 document.addEventListener("DOMContentLoaded", () => {
   const section = document.querySelector(".capturing-moments");
   const animatedText = document.querySelectorAll(".animated-text");
