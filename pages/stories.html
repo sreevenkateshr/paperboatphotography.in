@@ -21,146 +21,29 @@
       
         font-family: "Send Flowers", serif;
       }
-/* General Page Styling */
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Portfolio Section */
-.portfolio-detail {
-    background-color: #ffffff;
-    padding: 40px 0;
-}
-
-/* Container Styling */
-.portfolio-container {
-    width: 80%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-/* Title */
-.portfolio-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.text-muted {
-    text-align: center;
-    font-size: 1rem;
-    color: #777;
-}
-
-/* Main Image */
-.main-img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Image Grid - Two Images in a Row */
-.img-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.img-container img {
-    height: 300px;
-    object-fit: cover;
-}
-
-/* Different Widths for Images */
-.img-lg {
-    width: 65%;
-}
-
-.img-sm {
-    width: 35%;
-}
-
-/* Our Works Section */
-.our-works {
-    text-align: center;
-    margin: 50px 0;
-}
-
-.our-works h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Image Grid for "Our Works" */
-.img-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
-    gap: 10px;
-    padding: 0 10px;
-}
-
-.img-grid img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-/* Keep Grid Layout on All Screens */
-@media (max-width: 992px) {
-    .portfolio-container {
-        width: 90%;
+      .image-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+      gap: 0; /* No spacing between images */
+      width: 100%;
+      height: 100%;
     }
 
-    .img-container {
-        flex-wrap: wrap; /* Prevents stacking */
-        justify-content: center;
+    /* Image styling */
+    .image-container img {
+      width: 100%; /* Fill the container */
+      height: auto; /* Maintain aspect ratio */
     }
 
-    .img-lg, .img-sm {
-        width: 48%; /* Keep proportions on smaller screens */
+    /* For square images */
+    .image-container .square {
+      height: 300px!; /* Make them square */
     }
 
-    .img-grid {
-        grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns on tablets */
+    /* For rectangle images */
+    .image-container .rectangle {
+      height: 120px; /* Rectangular images */
     }
-}
-
-@media (max-width: 768px) {
-    .portfolio-container {
-        width: 95%;
-    }
-
-    .img-container {
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    .img-lg, .img-sm {
-        width: 48%; /* Maintain side-by-side layout */
-    }
-
-    .img-grid img {
-        
-        height: 150px; /* Prevent stacking on mobile */
-    }
-
-    .main-img {
-        height: 350px;
-    }
-}
-
-
-
 .navbar {
         background: transparent;
         transition: background 0.3s ease-in-out;
@@ -679,64 +562,36 @@ body {
         <h1 class="title">Stories</h1>
       </section>
 
-<section class="portfolio-detail">
-    <div class="portfolio-container">
-        <!-- Title -->
-        <div class="text-center mb-4">
-            <h2 class="portfolio-title">Rachel & Jonathan</h2>
-            <p class="text-muted">Date: 28 July 2023 | Category: Wedding</p>
-        </div>
+      
+        <div class="image-container">
+            <div class="square"><img src="/imgs/PRVN7737.jpg" alt="Image 1"></div>
+            <div class="rectangle"><img src="/imgs/PRVN8603.jpg" alt="Image 2"></div>
+            <div class="square"><img src="/imgs/PRVN7945.jpg" alt="Image 3"></div>
+            <div class="square"><img src="/imgs/PRVN8609.jpg" alt="Image 4"></div>
 
-        <!-- Main Image -->
-        <div>
-            <img src="/imgs/1 (2).png" class="main-img" alt="Bride and Groom">
-        </div>
+            <!-- Centered Text Box -->
+            <!-- <div class="grid-item text-box">
+                <h2>AADHI | NIKKI</h2>
+            </div> -->
 
-        <!-- Image Grid -->
-        <div class="img-container">
-            <img src="/imgs/PRVN7483.jpg" class="img-lg" alt="Wedding Moment">
-            <img src="/imgs/PRVN7294.jpg" class="img-sm" alt="Bride & Groom">
-        </div>
-
-        <div class="img-container">
-            <img src="/imgs/2 (3).png" class="img-sm" alt="Bride Holding Flowers">
-            <img src="/imgs/PRVN7461.jpg" class="img-lg" alt="Wedding Rings">
-        </div>
-
-        <div class="img-container">
-            <img src="/imgs/PRVN7737.jpg" class="img-lg" alt="Couple Dancing">
-            <img src="/imgs/PRVN8603.jpg" class="img-sm" alt="Bride in Car">
-        </div>
-
-        
-    
-        <!-- Our Works Section -->
-        <div class="our-works">
-            <h2>Our Works</h2>
+            <div class="square"><img src="/imgs/PRVN8608.jpg" alt="Image 5"></div>
+            <div class="square"><img src="/imgs/PRVN8798.jpg" alt="Image 6"></div>
+            <div class="rectangle"><img src="/imgs/PRVN8603.jpg" alt="Image 7"></div>
+            <div class="rectangle"><img src="/imgs/PRVN8602.jpg" alt="Image 8"></div>
         </div>
     
-        <!-- Image Grid -->
-        <div class="img-grid">
-            <img src="/imgs/PRVN7946.jpg" alt="Work 1">
-            <img src="/imgs/PRVN8603.jpg" alt="Work 2">
-            <img src="/imgs/PRVN8607.jpg" alt="Work 3">
-            <img src="/imgs/PRVN8603.jpg" alt="Work 4">
-        </div>
-    </div>
-</section>
-
 <footer class="footer">
     <div class="footer-container">
       <div class="footer-section">
         <h4>GET IN TOUCH</h4>
         <div class="contact">
-          <p><i class="fas fa-phone-alt"></i> +91 6374926377</p>
+          <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
           <p>
             <i class="fas fa-envelope"></i> paperboatphotography.in@gmail.com
           </p>
-          <p>
+          <!-- <p>
             <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
-          </p>
+          </p> -->
         </div>
       </div>
       <div class="vertical-line mx-4"></div>

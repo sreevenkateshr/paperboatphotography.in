@@ -331,9 +331,9 @@ footer {
 /* Social Media Links */
 
 
-.service-card {
+/* .service-card {
             /* border-radius: 12px; */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background: white;
             padding: 20px;
             text-align: center;
@@ -346,7 +346,7 @@ footer {
         .service-card img {
             width: 100%;
             height: 200px;
-            object-fit: fill;
+            object-fit: cover;
             border-radius: 0px;
         }
         .service-card h5 {
@@ -360,15 +360,15 @@ footer {
         }
         .quality-list li {
             list-style-type: "•"; /* Bullet point */
-            padding: 5px 0;
+            /* padding: 5px 0;
         }
         .more-services img {
             width: 100%;
             height: 100px;
-            object-fit: fill;
+            object-fit: cover;
             border-radius: 0px;
             margin-bottom: 1px;
-        }
+        } */ 
 
 
 
@@ -532,6 +532,243 @@ footer {
 }
 
 
+.package-img, .step-img {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.package-img:hover{
+    transform: scale(1.05);
+}
+
+.package-title, .step-title {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* General container */
+.grid-container {
+  padding-left: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3-column layout */
+    gap: 30px;
+    align-items: center;
+}
+
+/* Row styling */
+.grid-row {
+    display: contents; /* Allows row structure */
+}
+
+/* Image styling */
+.step-img {
+    width: 100%;
+    max-width: 220px; /* Reduce width */
+    height: 350px; /* Increase height */
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text box styling */
+.step-content {
+    max-width: 300px;
+    text-align: left;
+}
+
+/* Step numbers - Make them larger */
+.step-title::before {
+    content: attr(data-step); /* Uses step number from HTML */
+    font-size: 5rem; /* Large numbers */
+    font-weight: bold;
+    color: #b88c5a; /* Gold/Bronze color */
+    display: block;
+    text-align: center;
+    text-decoration: underline; /* Underline the numbers */
+    text-underline-offset: 5px;
+    padding-bottom: 10px; 
+}
+
+.step-title {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mobile View */
+@media (max-width: 991px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0px!important;
+    }
+
+    .step-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .step-img {
+        max-width: 100%;
+        height: auto;
+    }
+    .left-img{
+      display: none;
+    }
+    .bottom-img{
+      display: none;
+    }
+    .text-box p,h2,button{
+      padding-left: 0px!important;
+    }
+    .book-btn{
+      margin-left: 0px!important;
+    }
+    .text-box{
+      margin:10px;
+      min-height: 0px!important;
+    }
+ 
+   
+}
+.capturing-moments {
+  padding: 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+.animated-text {
+
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.section-title {
+  padding-bottom: 15px;
+}
+
+.img-fluids {
+  width: 10%;
+  height: auto;
+}
+
+/* General Section Styling */
+/* General Section Styling */
+.quality-service-section {
+  padding-top: 60px;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+/* Container for Text Box and Left Image */
+.content-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Left Image Styling (20% inside the text box) */
+.left-img {
+  width: 30%;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+  left: 10%;  /* Adjust for 20% overlap inside text box */
+  top: -50px;
+  z-index: 1;
+  border-radius: 0px;
+}
+
+/* Text Box Styling */
+
+
+/* Text Box Styling */
+.text-box {
+  background-color: rgba(113, 108, 108, 0.7); /* Dark background */
+  color: #fff;
+  padding: 40px; /* Increased padding for larger text box */
+  border-radius: 0px;
+  position: relative;
+ 
+  text-align: center;
+  max-width: 800px; /* Increase max-width for larger text box */
+  width: 90%; /* Increase width of the text box */
+  min-height: 500px; /* Minimum height to ensure more space */
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+.text-box h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-left: 400px;
+  margin-bottom: 20px;
+}
+.text-box p {
+  font-size: 1.2rem;
+  padding-left: 400px;
+  margin-bottom: 20px;
+}
+
+
+/* Bottom Image (Inside Text Area) */
+.bottom-img {
+    width: 50%;
+    height: 300px;
+    position: relative;
+    bottom: -40%;
+    left: 40%;
+    transform: translateY(-60%);
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-btn {
+  background-color: #000;
+  margin-left: 400px;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border-radius: 0px !important;
+  transition: 0.3s ease-in-out;
+  border: 2px solid #000000;
+  font-weight: 500;
+}
+
+.book-btn:hover {
+  background-color: #ffffff;
+  border-color: #000;
+  color:#000
+}
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <section>
@@ -585,11 +822,11 @@ footer {
         <h1 class="title">What We do</h1>
     </section>
 
-    <section class="service">
+    <!-- <section class="service">
     <div class="container py-5">
         <div class="row">
-            <!-- Wedding -->
-            <div class="col-md-4 mb-4" data-aos="fade-up">
+            Wedding -->
+            <!-- <div class="col-md-4 mb-4" data-aos="fade-up">
                 <div class="service-card">
                     <img src="/imgs/1 (2).png" alt="Wedding">
                     <h5>Wedding</h5>
@@ -600,9 +837,9 @@ footer {
                     </ul>
                 </div>
             </div>
-            
+             -->
             <!-- Engagement -->
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-card">
                     <img src="/imgs/3 (2)3.png" alt="Engagement">
                     <h5>Engagement</h5>
@@ -612,10 +849,10 @@ footer {
                         <li>Romantic couple portraits</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
     
             <!-- Baby Shoot -->
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-card">
                     <img src="/imgs/PRVN7945.jpg" alt="Baby Shoot">
                     <h5>Baby Shoot</h5>
@@ -626,9 +863,9 @@ footer {
                     </ul>
                 </div>
             </div>
-    
+     -->
             <!-- Birthday -->
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-card">
                     <img src="/imgs/PRVN8608.jpg" alt="Birthday">
                     <h5>Birthday</h5>
@@ -638,10 +875,10 @@ footer {
                         <li>Family and guest portraits</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
     
             <!-- Candid -->
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="service-card">
                     <img src="/imgs/PRVN8603.jpg" alt="Candid">
                     <h5>Candid</h5>
@@ -651,10 +888,10 @@ footer {
                         <li>Unique storytelling approach</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
     
             <!-- More Services -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="service-card">
                     <div class="row more-services">
                         <div class="col-6"><img src="/imgs/PRVN8605.jpg" alt="Fashion"></div>
@@ -673,20 +910,149 @@ footer {
             </div>
         </div>
     </div>
+</section> --> 
+
+<section class="container text-center my-5">
+  <h2 class="section-title">Photography Packages</h2>
+  <div class="row">
+      <div class="col-md-4">
+          <img src="/imgs/PRVN8603.jpg" class="img-fluid package-img" alt="Wedding">
+          <h3 class="package-title">Wedding</h3>
+          
+      </div>
+      <div class="col-md-4">
+          <img src="/imgs/1 (2).png" class="img-fluid package-img" alt="Portrait">
+          <h3 class="package-title">Portrait</h3>
+          
+      </div>
+      <div class="col-md-4">
+          <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
+          <h3 class="package-title">Engagement</h3>
+         
+      </div>
+      <div class="col-md-4">
+        <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
+        <h3 class="package-title">Engagement</h3>
+       
+    </div>
+    <div class="col-md-4">
+      <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
+      <h3 class="package-title">Engagement</h3>
+     
+  </div>
+  <div class="col-md-4">
+    <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
+    <h3 class="package-title">Engagement</h3>
+   
+</div>
+
+  </div>
 </section>
+
+<section class="capturing-moments">
+  <img src="/imgs/pngtree.png" class="img-fluids"  alt="Capturing Moments">
+  <div class="container text-center">
+      <h2 class="section-title">Creating Timeless Memories Across the Globe</h2>
+      <p class="animated-text">As photographers, we find beauty in the little moments—the ones that can’t be staged but are full of emotion.</p>
+      <p class="animated-text">We will be there to capture every moment of your special day, from the time you get ready to the time you leave your reception.</p>
+</section>
+
+<!-- What to Expect Section -->
+<section class="container text-center my-5">
+  <h2 class="section-title">What to Expect</h2>
+
+  <!-- Grid Layout for Desktop -->
+  <div class="grid-container">
+
+      <!-- Row 1 -->
+      <div class="grid-row">
+          <img src="/imgs/PRVN8609.jpg" class="img-fluid step-img img-large" alt="Step 1">
+          <div class="step-content text-large">
+              <h3 class="step-title" data-step="1">Breaking the Ice</h3>
+              <p class="step-text">  We start with a relaxed consultation to understand your vision, preferred styles, and expectations. 
+                This helps us tailor the shoot to your personality and the essence of your story.</p>
+          </div>
+          <img  src="/imgs/PRVN8608.jpg" class="img-fluid step-img img-large" alt="Step 4">
+
+      <!-- Row 2 -->
+      <div class="grid-row">
+        <div class="step-content text-large">
+          <h3 class="step-title" data-step="2">Planning & Preparation</h3>
+          <p class="step-text">We carefully plan every detail of the shoot, including location, lighting, and props. 
+            Our goal is to ensure a seamless experience where every frame is picture-perfect.</p>
+      </div>
+      <img src="/imgs/PRVN8603.jpg" class="img-fluid step-img img-large" alt="Step 3">
+          <div class="step-content text-large">
+              <h3 class="step-title" data-step="3">Session Coverage</h3>
+              <p class="step-text"> On the big day, we focus on capturing authentic emotions and candid moments. 
+                Whether it's a wedding, portrait, or engagement shoot, we make sure to bring out the best in every scene.</p>
+          </div>
+        
+          
+      </div>
+
+      <!-- Row 3 -->
+      <div class="grid-row">
+        <img src="/imgs/PRVN7946.jpg" class="img-fluid step-img img-large" alt="Step 4">
+          <div class="step-content text-large">
+              <h3 class="step-title" data-step="4">Post-Production & Delivery</h3>
+              <p class="step-text">  Our editing team enhances each photo to perfection, balancing color, lighting, and composition. 
+                Your stunning images will be delivered in high resolution, ready to be shared and cherished forever.
+            </p>
+          </div>
+          <img   src="/imgs/PRVN8607.jpg" class="img-fluid step-img img-large" alt="Step 4">
+      </div>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- Call to Action -->
+<section class="quality-service-section">
+  <div class="container">
+    <!-- Section Title -->
+    <h2 class="section-title text-center mb-5">Our Commitment to Quality</h2>
+
+    <!-- Container for Text Box and Left Image -->
+    <div class="content-container">
+      <!-- Left Image -->
+      <img src="/imgs/PRVN7946.jpg" class="left-img" alt="Quality Service">
+      
+      <!-- Text Box -->
+      <div class="text-box">
+        <h2 class="quality-title">Quality Service</h2>
+        <p>On your big day, you can count on me to turn fleeting moments into timeless treasures you will cherish.</p>
+        <button type="submit" class="btn book-btn">Enquiry</button>
+      </div>
+    
+
+    <!-- Bottom Image (Inside Text Area) -->
+   
+      
+    </div>
+    <img src="/imgs/PRVN8602.jpg" class="bottom-img" alt="Wedding Rings">
+    
+  </div>
+</section>
+
+
+
 
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-section">
       <h4>GET IN TOUCH</h4>
       <div class="contact">
-        <p><i class="fas fa-phone-alt"></i> +91 6374926377</p>
+        <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
         <p>
           <i class="fas fa-envelope"></i> paperboatphotography.in@gmail.com
         </p>
-        <p>
+        <!-- <p>
           <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
-        </p>
+        </p> -->
       </div>
     </div>
     <div class="vertical-line mx-4"></div>
