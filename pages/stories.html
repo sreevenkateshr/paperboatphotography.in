@@ -21,29 +21,88 @@
       
         font-family: "Send Flowers", serif;
       }
-      .image-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 images per row */
-      gap: 0; /* No spacing between images */
-      width: 100%;
-      height: 100%;
-    }
+      .head{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+      .body{
+        overflow-x: hidden;
+      }
+      .container-fluid {
+            padding: 0;
+        }
+        .row {
+            margin: 0;
+        }
+        .img-fluid {
+            width: 100%;
+            height: 100vh; /* Adjust height based on row */
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .size {
+            height: 60vh;
+        }
+        .full {
+            height: 70vh;
+        }
+        .half-height {
+            height: 50vh;
+        }
+        .small-img {
+            height: 50vh;
+        }
+        .large-img {
+            height: 50vh;
+        }
+        /* Full-Screen Overlay */
+        .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .fullscreen-overlay img {
+          
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 0px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            background: rgba(255, 0, 0, 0.8);
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        .close-btn:hover {
+            background: red;
+        }
+        /* Disable scrolling when full-screen is active */
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+        }
+        .hidden-navbar {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
 
-    /* Image styling */
-    .image-container img {
-      width: 100%; /* Fill the container */
-      height: auto; /* Maintain aspect ratio */
-    }
-
-    /* For square images */
-    .image-container .square {
-      height: 300px!; /* Make them square */
-    }
-
-    /* For rectangle images */
-    .image-container .rectangle {
-      height: 120px; /* Rectangular images */
-    }
 .navbar {
         background: transparent;
         transition: background 0.3s ease-in-out;
@@ -149,7 +208,7 @@
         position: relative;
         width: 100%;
         height: 400px; /* Adjust height as needed */
-        background: url("/imgs/img3.png") no-repeat center center/cover;
+        background: url("/imgs/2\ \(3\).png") no-repeat center center/cover;
         display: flex;
         align-items: flex-end; /* Ensures title appears after image */
         justify-content: center;
@@ -498,7 +557,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
           <!-- Center Logo -->
           <a class="navbar-brand mx-auto d-lg-none" href="#">
@@ -562,23 +621,52 @@
         <h1 class="title">Stories</h1>
       </section>
 
+      <div><h2 class="head">Niki & Abi Engagement</h2></div>
+
       
-        <div class="image-container">
-            <div class="square"><img src="/imgs/PRVN7737.jpg" alt="Image 1"></div>
-            <div class="rectangle"><img src="/imgs/PRVN8603.jpg" alt="Image 2"></div>
-            <div class="square"><img src="/imgs/PRVN7945.jpg" alt="Image 3"></div>
-            <div class="square"><img src="/imgs/PRVN8609.jpg" alt="Image 4"></div>
-
-            <!-- Centered Text Box -->
-            <!-- <div class="grid-item text-box">
-                <h2>AADHI | NIKKI</h2>
-            </div> -->
-
-            <div class="square"><img src="/imgs/PRVN8608.jpg" alt="Image 5"></div>
-            <div class="square"><img src="/imgs/PRVN8798.jpg" alt="Image 6"></div>
-            <div class="rectangle"><img src="/imgs/PRVN8603.jpg" alt="Image 7"></div>
-            <div class="rectangle"><img src="/imgs/PRVN8602.jpg" alt="Image 8"></div>
+      <div class="container-fluid">
+        <!-- First Row: Two equal images filling the screen -->
+        <div class="row g-0">
+            <div class="col-6">
+                <img src="/imgs/PRVN7294.jpg" class="img-fluid size" alt="Image 1">
+            </div>
+            <div class="col-6">
+                <img src="/imgs/PRVN7945.jpg" class="img-fluid size" alt="Image 2">
+            </div>
         </div>
+    
+        <!-- Second Row: One full-width image -->
+        <div class="row g-0">
+            <div class="col-12">
+                <img src="/imgs/PRVN7946.jpg" class="img-fluid full" alt="Image 3">
+            </div>
+        </div>
+    
+        <!-- Third Row: Small image on the left, large image on the right -->
+        <div class="row g-0">
+            <div class="col-4">
+                <img src="/imgs/PRVN8602.jpg" class="img-fluid small-img" alt="Image 4">
+            </div>
+            <div class="col-8">
+                <img src="/imgs/PRVN8607.jpg" class="img-fluid large-img" alt="Image 5">
+            </div>
+        </div>
+    
+        <!-- Fourth Row: Large image on the left, small image on the right -->
+        <div class="row g-0">
+            <div class="col-8">
+                <img src="/imgs/PRVN8609.jpg" class="img-fluid large-img" alt="Image 6">
+            </div>
+            <div class="col-4">
+                <img src="/imgs/PRVN8605.jpg" class="img-fluid small-img" alt="Image 7">
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+      <span class="close-btn" id="closeBtn">X</span>
+      <img id="fullscreenImage" src="" alt="Full Screen">
+  </div>
     
 <footer class="footer">
     <div class="footer-container">
@@ -759,6 +847,51 @@ document.addEventListener("DOMContentLoaded", function () {
           navbarNav.classList.remove("show"); // Hide menu
         });
       });
+    });
+
+        // Get all images and overlay elements
+        const images = document.querySelectorAll('.img-fluid');
+    const overlay = document.getElementById('fullscreenOverlay');
+    const fullscreenImage = document.getElementById('fullscreenImage');
+    const closeBtn = document.getElementById('closeBtn');
+    const body = document.body;
+    const navbar = document.getElementById('navbar');
+
+    // Open Full-Screen Mode
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            fullscreenImage.src = this.src; // Show clicked image
+            overlay.style.display = 'flex'; // Show overlay
+            body.classList.add('no-scroll'); // Stop scrolling
+            navbar.classList.add('hidden-navbar'); // Hide navbar (animate out)
+        });
+    });
+
+    // Close Full-Screen Mode
+    function closeFullscreen() {
+        overlay.style.display = 'none';
+        body.classList.remove('no-scroll'); // Enable scrolling
+        navbar.classList.remove('hidden-navbar'); // Show navbar (animate in)
+    }
+
+    // Close on clicking the X button
+    closeBtn.addEventListener('click', closeFullscreen);
+
+    // Close when clicking outside the image
+    overlay.addEventListener('click', function(event) {
+        if (event.target !== fullscreenImage) {
+            closeFullscreen();
+        }
+    });
+
+    // Prevent background keyboard interaction
+    document.addEventListener('keydown', function(event) {
+        if (overlay.style.display === 'flex') {
+            event.preventDefault(); // Disable key presses
+            if (event.key === 'Escape') {
+                closeFullscreen();
+            }
+        }
     });
     </script>
 

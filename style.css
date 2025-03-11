@@ -1317,25 +1317,27 @@ h5 {
   height: 90vh; /* Increased section height */
   display: flex;
   align-items: center;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.4) 40%, rgba(248, 241, 235, 1) 70%),
-              url('/imgs/PRVN8602.jpg') no-repeat center right;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 20%, rgba(248, 241, 235, 1) 80%),
+              url('/imgs/PRVN8608.jpg') no-repeat center right;
   background-size: cover;
 }
 
-/* Text Content */
 .content1 {
-  max-width: 600px;
-  padding-left: 50px;
+  
+  /* Right padding for spacing */
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
   z-index: 2;
 }
 
 .text-box1 {
+  margin-left: 60px;
   background: rgba(255, 255, 255, 0.75); /* Light semi-transparent background */
   padding: 60px 40px; /* Increased height */
   min-height: 300px; 
-  max-width: 500px;/* Ensure proper height */
+  max-width: 500px; /* Ensure proper height */
   border-radius: 0px;
-  text-align: left;
+  text-align: left; /* Keep text aligned to the left inside the box */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 3px solid rgba(90, 74, 66, 0.5); /* Inner border with soft brown color */
 }
@@ -1353,6 +1355,10 @@ h5 {
   font-size: 18px;
   color: #6d5f52; /* Soft grayish-brown for readability */
 }
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
