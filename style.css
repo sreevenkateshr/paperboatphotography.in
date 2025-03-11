@@ -966,7 +966,7 @@ a {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid #ddd;
+ 
   padding-bottom: 20px;
 }
 
@@ -1463,4 +1463,32 @@ h5 {
   top: 0;
   margin-left: -50px;
   z-index: -1;
+}
+
+
+.footer-nav {
+  background-color: #f8f9fa; /* Background color */
+  padding: 15px 0;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer-links a:hover {
+  color: #007bff;
+}
+.footer-logo img {
+  height: 50px; /* Adjust logo size */
 }

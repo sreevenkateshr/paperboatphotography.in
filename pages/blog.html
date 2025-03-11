@@ -174,7 +174,7 @@ h2,h1 {
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        border-bottom: 1px solid #ddd;
+        
         padding-bottom: 20px;
       }
 
@@ -318,6 +318,7 @@ h2,h1 {
         .gallery-img {
           width: 125px !important;
         }
+        
       }
       .vertical-line {
     width: 2px;
@@ -472,42 +473,134 @@ h2,h1 {
   }
   
 }
-
 .blog-section {
+    text-align: center;
+    padding: 50px 20px; /* Adjusted padding for responsiveness */
+}
+
+.blog-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Responsive Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Spacing between cards */
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    width: 100%;
+    max-width: 600px; /* Limits max width for consistency */
+    height: 100%;
+    min-height: 450px; /* Ensures all cards are the same height */
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 0px 0px 0 0;
+}
+
+/* Card Body */
+.card-body {
+    flex-grow: 1; /* Makes content fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+/* Title & Text */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+}
+
+/* 🔹 Mobile View (Small Screens) */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Adjusts width for smaller screens */
+        min-height: auto;
+        gap:20px; /* Allows height to adjust dynamically */
+    }
+
+    .blog-section h2 {
+        font-size: 28px;
+    }
+    .custom{
+      gap:20px;
+
+    }
+}
+
+/* 🔹 Tablet View (Medium Screens) */
+@media (max-width: 1024px) {
+    .card {
+        width: 100%;
+        
+    }
+    .custom{
+      gap:20px;
+    }
+    .new1{
+      margin-top:20px;
+    }
+}
+
+.footer-nav {
+            background-color: #f8f9fa; /* Background color */
+            padding: 15px 0;
+        }
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             text-align: center;
-            padding: 50px 0;
         }
-        .blog-section h2 {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        .footer-links {
+            display: flex;
+            gap: 20px;
         }
-        .card {
-            border: none;
-            text-align: center;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 0px;
-            max-width: 600px;
-            max-height: 500px;
+        .footer-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
         }
-        .card img {
-            border-radius: 0px;
-            max-height: 200px;
-            object-fit: cover;
+        .footer-links a:hover {
+            color: #007bff;
         }
-        .card-body {
-            padding-top: 15px;
+        .footer-logo img {
+            height: 50px; /* Adjust logo size */
         }
-        .card-title {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .card-text {
-            font-size: 14px;
-            color: #555;
-        }
+
 </style>
 </head>
 <body>
@@ -550,7 +643,7 @@ h2,h1 {
             </ul>
   
             <!-- Center Logo for Desktop -->
-            <a class="navbar-brand d-none d-lg-block mx-auto" href="#">
+            <a class="navbar-brand d-none d-lg-block mx-auto" href="/index.html">
               <img src="/WEB PB2.png" alt="Logo" height="50" />
             </a>
   
@@ -579,19 +672,19 @@ h2,h1 {
         <h2>LATEST STORIES</h2>
         <p>Discover expert photography tips, creative ideas, and inspiring stories from the world of photography.</p>
 
-        <div class="row mt-4">
+        <div class="row mt-4 custom">
             <div class="col-md-6">
                 <div class="card">
                     <img src="/imgs/PRVN8608.jpg" class="card-img-top" alt="Wedding Photography">
                     <div class="card-body">
                         <h5 class="card-title">The Art of Capturing Emotions in Wedding Photography</h5>
                         <p class="card-text"><strong>Date:</strong> 15 March 2025 <br> <strong>Category:</strong> Wedding Photography</p>
-                        <p class="card-text">Photography is more than just clicking a button; it's about capturing raw emotions, love, and joy on a couple’s special day. Discover how to freeze these heartfelt moments in time.</p>
+                        <p class="card-text">Photography is more than just clicking a button; it's about capturing raw emotions, love, and joy on a couple’s special day.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 new1">
                 <div class="card">
                     <img src="/imgs/PRVN8605.jpg" class="card-img-top" alt="Pre-Wedding Photography">
                     <div class="card-body">
@@ -626,6 +719,29 @@ h2,h1 {
         </div>
     </div>
 
+        <!-- Custom Footer Section -->
+        <section class="footer-nav">
+          <div class="container footer-container">
+              <!-- Left Navigation -->
+              <div class="footer-links">
+                  <a href="/index.html">Home</a>
+                  <a href="/pages/services.html">Services</a>
+                  <a href="/pages/portfolio.html">Portfolio</a>
+              </div>
+              
+              <!-- Centered Logo -->
+              <div class="footer-logo">
+                 <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
+              </div>
+  
+              <!-- Right Navigation -->
+              <div class="footer-links">
+                  <a href="/pages/about.html">About Us</a>
+                  <a href="/pages/blog.html">Blog</a>
+                  <a href="/pages/contact.html">Contact Us</a>
+              </div>
+          </div>
+      </section>
 
       <footer class="footer">
         <div class="footer-container">

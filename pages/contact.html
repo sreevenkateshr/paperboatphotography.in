@@ -177,7 +177,7 @@ h2,h1 {
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        border-bottom: 1px solid #ddd;
+        
         padding-bottom: 20px;
       }
 
@@ -619,6 +619,33 @@ h4 {
   
 }
 
+.footer-nav {
+            background-color: #f8f9fa; /* Background color */
+            padding: 15px 0;
+        }
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            color: #007bff;
+        }
+        .footer-logo img {
+            height: 50px; /* Adjust logo size */
+        }
+
 
 
     </style>
@@ -804,6 +831,29 @@ h4 {
           </div>
       </div>
   </section>
+
+  <section class="footer-nav">
+    <div class="container footer-container">
+        <!-- Left Navigation -->
+        <div class="footer-links">
+            <a href="/index.html">Home</a>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/portfolio.html">Portfolio</a>
+        </div>
+        
+        <!-- Centered Logo -->
+        <div class="footer-logo">
+           <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
+        </div>
+
+        <!-- Right Navigation -->
+        <div class="footer-links">
+            <a href="/pages/about.html">About Us</a>
+            <a href="/pages/blog.html">Blog</a>
+            <a href="/pages/contact.html">Contact Us</a>
+        </div>
+    </div>
+</section>
 
     <footer class="footer">
       <div class="footer-container">
