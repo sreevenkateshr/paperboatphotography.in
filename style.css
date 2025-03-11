@@ -930,9 +930,10 @@ a {
 
 /* Right Side Image */
 .booking-image {
-  width: 100%;
+  width: auto;
   height: 700px;
   border-radius: 0px;
+  margin-left: 50px;
 }
 
 /* Responsive Design */
@@ -1435,16 +1436,18 @@ h5 {
   height: auto;
   display: block; /* Ensures visibility */
   margin-left: auto; /* Pushes image to the right */
+  margin-right: 220px;
 }
 .img2{
-  position: relative;
+  position: absolute;
   text-align:left; /* Aligns the image container to the right */
-  margin-top: -120px; 
+  margin-top: -375px; 
   margin-bottom: -50px; /* Adjust as needed */
   width: 120px; /* Adjust size */
   height: auto;
   display: block; /* Ensures visibility */
   margin-right: auto;
   transform: scaleX(-1);/* Pushes image to the right */
+  margin-left: 220px;
 }
 
