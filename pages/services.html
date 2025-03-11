@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap'); 
-      
-      h1, h2{
-      
-        font-family: "Send Flowers", serif;
-      }
+       @import url("https://fonts.cdnfonts.com/css/rightman-signature");
+h2,h1 {
+  /* font-family: "Send Flowers", serif; */
+  font-family: "Rightman Signature";
+    font-size: 60px !important;
+    font-weight: normal !important;
+}
 .navbar {
   background: transparent;
   transition: background 0.3s ease-in-out;
@@ -767,7 +768,48 @@ footer {
   color:#000
 }
 
+.our-services {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Service Card Styling */
+.service-card {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border-radius: 10px; */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+  border-radius: 0; /* No curves */
+}
+
+.service-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #444;
+}
 
 
 
@@ -831,132 +873,42 @@ footer {
         <h1 class="title">What We do</h1>
     </section>
 
-    <!-- <section class="service">
-    <div class="container py-5">
-        <div class="row">
-            Wedding -->
-            <!-- <div class="col-md-4 mb-4" data-aos="fade-up">
-                <div class="service-card">
-                    <img src="/imgs/1 (2).png" alt="Wedding">
-                    <h5>Wedding</h5>
-                    <ul class="quality-list">
-                        <li>High-resolution photography</li>
-                        <li>Creative candid shots</li>
-                        <li>Customized wedding albums</li>
-                    </ul>
-                </div>
-            </div>
-             -->
-            <!-- Engagement -->
-            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card">
-                    <img src="/imgs/3 (2)3.png" alt="Engagement">
-                    <h5>Engagement</h5>
-                    <ul class="quality-list">
-                        <li>Natural and candid poses</li>
-                        <li>Elegant pre-wedding shoot</li>
-                        <li>Romantic couple portraits</li>
-                    </ul>
-                </div>
-            </div> -->
-    
-            <!-- Baby Shoot -->
-            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-card">
-                    <img src="/imgs/PRVN7945.jpg" alt="Baby Shoot">
-                    <h5>Baby Shoot</h5>
-                    <ul class="quality-list">
-                        <li>Soft and warm tones</li>
-                        <li>Adorable baby props</li>
-                        <li>Natural light photography</li>
-                    </ul>
-                </div>
-            </div>
-     -->
-            <!-- Birthday -->
-            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-card">
-                    <img src="/imgs/PRVN8608.jpg" alt="Birthday">
-                    <h5>Birthday</h5>
-                    <ul class="quality-list">
-                        <li>Fun and vibrant captures</li>
-                        <li>Perfect cake smash shots</li>
-                        <li>Family and guest portraits</li>
-                    </ul>
-                </div>
-            </div> -->
-    
-            <!-- Candid -->
-            <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-card">
-                    <img src="/imgs/PRVN8603.jpg" alt="Candid">
-                    <h5>Candid</h5>
-                    <ul class="quality-list">
-                        <li>Genuine emotions captured</li>
-                        <li>Creative compositions</li>
-                        <li>Unique storytelling approach</li>
-                    </ul>
-                </div>
-            </div> -->
-    
-            <!-- More Services -->
-            <!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-card">
-                    <div class="row more-services">
-                        <div class="col-6"><img src="/imgs/PRVN8605.jpg" alt="Fashion"></div>
-                        <div class="col-6"><img src="/imgs/PRVN8603.jpg" alt="Travel"></div>
-                        <div class="col-6"><img src="/imgs/PRVN8609.jpg" alt="Corporate"></div>
-                        <div class="col-6"><img src="/imgs/1 (2).png" alt="Event"></div>
-                        <h5>More Services</h5>
-                        <ul class="quality-list">
-                            <li>Fashion Photography</li>
-                            <li>Travel Shoots</li>
-                            
-                            <li>Event Coverage</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --> 
-
-<section class="container text-center my-5">
-  <h2 class="section-title">Photography Packages</h2>
-  <div class="row">
-      <div class="col-md-4">
-          <img src="/imgs/PRVN8603.jpg" class="img-fluid package-img" alt="Wedding">
-          <h3 class="package-title">Wedding</h3>
+    <section class="our-services">
+      <div class="container">
+          <h2 class="section-title">Moments</h2>
+          <h3 class="section-title">What We do</h3>
+          <div class="services-grid">
+              <div class="service-card">
+                  <img src="/imgs/1 (2).png" alt="Engagement">
+                  <h3>Engagement</h3>
+              </div>
+              <div class="service-card">
+                  <img src="/imgs/PRVN8608.jpg" alt="Wedding">
+                  <h3>Wedding</h3>
+              </div>
+              <div class="service-card">
+                  <img src="/imgs/PRVN8607.jpg" alt="Birthday">
+                  <h3>Birthday</h3>
+              </div>
+              <div class="service-card">
+                  <img src="/imgs/PRVN8603.jpg" alt="Anniversary">
+                  <h3>Anniversary</h3>
+              </div>
+              <div class="service-card">
+                  <img src="/imgs/PRVN8607.jpg" alt="Maternity">
+                  <h3>Maternity</h3>
+              </div>
+              <div class="service-card">
+                  <img src="/imgs/PRVN8602.jpg" alt="Corporate Events">
+                  <h3>Corporate Events</h3>
+              </div>
+          </div>
+          
           
       </div>
-      <div class="col-md-4">
-          <img src="/imgs/1 (2).png" class="img-fluid package-img" alt="Portrait">
-          <h3 class="package-title">Portrait</h3>
-          
-      </div>
-      <div class="col-md-4">
-          <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
-          <h3 class="package-title">Engagement</h3>
-         
-      </div>
-      <div class="col-md-4">
-        <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
-        <h3 class="package-title">Engagement</h3>
-       
-    </div>
-    <div class="col-md-4">
-      <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
-      <h3 class="package-title">Engagement</h3>
-     
-  </div>
-  <div class="col-md-4">
-    <img src="/imgs/PRVN7946.jpg" class="img-fluid package-img" alt="Engagement">
-    <h3 class="package-title">Engagement</h3>
-   
-</div>
+  </section>
 
-  </div>
-</section>
+
 
 <section class="capturing-moments">
   <img src="/imgs/pngtree.png" class="img-fluids"  alt="Capturing Moments">
