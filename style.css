@@ -1,12 +1,14 @@
 @import url("https://fonts.cdnfonts.com/css/rightman-signature");
 @import url('https://fonts.cdnfonts.com/css/derivia');
 @import url('https://fonts.cdnfonts.com/css/martel-sans');
+@import url('https://fonts.cdnfonts.com/css/spectral'); 
 h2 {
   /* font-family: "Send Flowers", serif; */
   font-family: "Rightman Signature";
     font-size: 60px !important;
     font-weight: normal !important;
 }
+
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -90,12 +92,16 @@ h2 {
 .navbar {
   background: transparent;
   transition: background 0.3s ease-in-out;
+  font-family: 'Spectral', sans-serif; 
 }
 
 /* Navbar Brand Logo */
 .navbar .navbar-brand img {
   filter: brightness(0) invert(1); /* White logo */
   transition: filter 0.3s ease-in-out;
+}
+.navbar i{
+  color:white
 }
 
 /* Navbar Links - Default White */
@@ -111,6 +117,10 @@ h2 {
 .navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.95) !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar.scrolled i{
+  color:#000
+
 }
 
 /* Navbar Links - Change to Black on Scroll */
@@ -211,7 +221,7 @@ h2 {
 
 .about-text p {
   font-size: 1.2rem;
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-family: "Martel Sans"!important;
   color: #555;
   animation: fadeInUp 1s ease-out 0.5s forwards;
   text-align: justify;
@@ -230,7 +240,7 @@ h2 {
   overflow: hidden;
   color: rgb(0, 0, 0);
   z-index: 1;
-  font-family: inherit;
+  font-family: 'Spectral', sans-serif;
   font-weight: 500;
 
   /* Center the button */
@@ -443,7 +453,7 @@ a {
   
 }
 .animated-text {
-  
+  font-family: "Martel Sans"!important;
   font-style: italic;
   color: #666;
   margin-bottom: 5px;
@@ -520,6 +530,7 @@ a {
 }
 
 .text-box p {
+  font-family: "Martel Sans"!important;
   font-size: 1rem;
   margin: 0;
 }
@@ -617,7 +628,7 @@ a {
   overflow: hidden;
   color: rgb(0, 0, 0);
   z-index: 1;
-  font-family: inherit;
+  font-family: 'Spectral', sans-serif;
   font-weight: 500;
 
   /* Center the button */
@@ -768,7 +779,7 @@ a {
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-family: "Martel Sans"!important;
 }
 
 /* Testimonial Card */
@@ -874,12 +885,14 @@ a {
 .booking-subtitle {
   font-size: 1.2rem;
   color: #666;
+  font-family: 'Derivia', sans-serif!important;
   margin-bottom: 40px;
 }
 
 /* Booking Text */
 .booking-text {
   padding-right: 40px;
+  font-family: "Martel Sans"!important;
 }
 
 .booking-text h3 {
@@ -892,6 +905,7 @@ a {
 .booking-text p {
   font-size: 1.1rem;
   color: #555;
+  font-family: "Martel Sans"!important;
   margin-bottom: 20px;
 }
 
@@ -1183,29 +1197,7 @@ a {
   color:#5da0d8
 }
 
-/* #scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: #292929;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  display: none; 
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; 
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-#scrollToTopBtn:hover {
-  background-color: #000000;
-  transform: scale(1.1);
-} */
 
 #scrollToTopBtn {
   position: fixed;
@@ -1358,6 +1350,7 @@ h5 {
 
 .text-box1 p {
   font-size: 18px;
+  font-family: "Martel Sans"!important;
   color: #6d5f52; /* Soft grayish-brown for readability */
 }
 
@@ -1377,7 +1370,7 @@ h5 {
   }
   .text-box1 {
       text-align: center;
-      padding: 40px 30px; /* Reduce padding for smaller screens */
+      padding: 20px 30px; /* Reduce padding for smaller screens */
   }
 }
 
@@ -1496,3 +1489,15 @@ h5 {
   height: 50px; /* Adjust logo size */
 }
 
+.cla{
+  font-family: 'Derivia', sans-serif!important;
+}
+
+.an{
+  text-decoration: none;
+  font-family: 'Spectral', sans-serif; 
+}
+
+.footer-bottom p{
+  font-family: 'Spectral', sans-serif; 
+}

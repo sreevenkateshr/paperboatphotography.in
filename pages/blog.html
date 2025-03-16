@@ -14,6 +14,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
      @import url("https://fonts.cdnfonts.com/css/rightman-signature");
+     @import url('https://fonts.cdnfonts.com/css/spectral'); 
+     @import url('https://fonts.cdnfonts.com/css/derivia');
+@import url('https://fonts.cdnfonts.com/css/martel-sans');
 h2,h1 {
   /* font-family: "Send Flowers", serif; */
   font-family: "Rightman Signature";
@@ -24,6 +27,7 @@ h2,h1 {
 .navbar {
         background: transparent;
         transition: background 0.3s ease-in-out;
+        font-family: 'Spectral', sans-serif; 
       }
 
       /* Navbar Brand Logo */
@@ -69,6 +73,13 @@ h2,h1 {
           margin: 0 auto;
         }
       }
+      .navbar i{
+  color:white
+}
+.navbar.scrolled i{
+  color:#000
+
+}
 
       /* Underline Animation on Hover */
       .navbar-nav .nav-link {
@@ -389,29 +400,7 @@ h2,h1 {
   color:#5da0d8
 }
 
-/* #scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: #292929;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  display: none; 
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; 
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-#scrollToTopBtn:hover {
-  background-color: #000000;
-  transform: scale(1.1);
-} */
 
 #scrollToTopBtn {
   position: fixed;
@@ -530,12 +519,14 @@ h2,h1 {
 .card-title {
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Derivia', sans-serif;
 }
 
 .card-text {
     font-size: 14px;
     color: #555;
     text-align: left;
+    font-family: 'Martel Sans', sans-serif;
 }
 
 /* 🔹 Mobile View (Small Screens) */
@@ -601,15 +592,24 @@ h2,h1 {
             height: 50px; /* Adjust logo size */
         }
 
+        .an{
+  text-decoration: none;
+  font-family: 'Spectral', sans-serif; 
+}
+
+.footer-bottom p{
+  font-family: 'Spectral', sans-serif; 
+}
+
 </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
           <!-- Center Logo -->
-          <a class="navbar-brand mx-auto d-lg-none" href="#">
-            <img src="/WEB PB2.png" alt="Logo" height="50" />
-          </a>
+          <a class="navbar-brand  d-lg-none" href="#">
+            <img src="/WEB PB2.png" alt="Logo" height="50">
+        </a>
   
           <!-- Navbar Toggler for Mobile -->
           <button
@@ -719,29 +719,7 @@ h2,h1 {
         </div>
     </div>
 
-        <!-- Custom Footer Section -->
-        <section class="footer-nav">
-          <div class="container footer-container">
-              <!-- Left Navigation -->
-              <div class="footer-links">
-                  <a href="/index.html">Home</a>
-                  <a href="/pages/services.html">Services</a>
-                  <a href="/pages/portfolio.html">Portfolio</a>
-              </div>
-              
-              <!-- Centered Logo -->
-              <div class="footer-logo">
-                 <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
-              </div>
-  
-              <!-- Right Navigation -->
-              <div class="footer-links">
-                  <a href="/pages/about.html">About Us</a>
-                  <a href="/pages/blog.html">Blog</a>
-                  <a href="/pages/contact.html">Contact Us</a>
-              </div>
-          </div>
-      </section>
+      
 
       <footer class="footer">
         <div class="footer-container">
@@ -750,7 +728,8 @@ h2,h1 {
             <div class="contact">
               <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
               <p>
-                <i class="fas fa-envelope"></i> paperboatphotography.in@gmail.com
+                <!-- <i class="fas fa-envelope"></i>  -->
+                paperboatphotography.in@gmail.com
               </p>
               <!-- <p>
                 <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
@@ -759,6 +738,9 @@ h2,h1 {
           </div>
           <div class="vertical-line mx-4"></div>
           <div class="footer-section">
+            <div class="footer-logo">
+              <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
+           </div>
             <p class="quote">
               "Photography takes an instant out of time, altering life by holding it still." – Dorothea Lange
             </p>
@@ -773,9 +755,9 @@ h2,h1 {
             </div>
           </div>
         </div>
-        <div class="full-screen-image">
+        <!-- <div class="full-screen-image">
           <img src="/imgs/Black Elegant Minimalist Profile.png" alt="Full Screen Image" class="img-fluid">
-      </div>
+      </div> -->
     
     
         <div class="footer-bottom">
@@ -787,7 +769,7 @@ h2,h1 {
           <p>
             Copyright &copy; Paperboat 2025 - All
             rights reserved | Designed and Developed by
-            <span class="lastcolor">Sherlin A G</span>
+            <a class="an" href="https://sherlin-ag.netlify.app/"><span class="lastcolor">Sherlin A G</span></a>
           </p>
         </div>
       </footer>

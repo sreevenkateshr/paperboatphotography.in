@@ -16,6 +16,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
      @import url("https://fonts.cdnfonts.com/css/rightman-signature");
+     @import url('https://fonts.cdnfonts.com/css/spectral'); 
+     @import url('https://fonts.cdnfonts.com/css/derivia');
+     @import url('https://fonts.cdnfonts.com/css/martel-sans');
 h2,h1 {
   /* font-family: "Send Flowers", serif; */
   font-family: "Rightman Signature";
@@ -63,6 +66,9 @@ body {
     padding-bottom: 0px !important;
 }
 .banner-text p {
+  font-family: 'Spectral', sans-serif;
+    
+    padding-top: 0px !important;
    padding: 10px;
 }
 /* Stay Beautiful Section */
@@ -104,30 +110,7 @@ body {
     object-fit: cover;
 }
 
-/* Highlighted Works Section */
-/* Portfolio Grid */
-/* .portfolio-item {
-    text-align: center;
-    background-color: #f8f8f8;
-    padding: 10px;
-}
 
-.portfolio-item img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-
-.portfolio-item h5 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.portfolio-item p {
-    font-size: 1rem;
-    color: #777;
-} */
 
 /* Get in Touch Button */
 .btn-outline-dark {
@@ -234,6 +217,7 @@ body {
 .wedding-content p {
   font-size: 1.2rem;
   line-height: 1.6;
+  font-family: 'martel sans', sans-serif;
   color: #555;
 }
 @media (max-width: 768px) {
@@ -272,6 +256,7 @@ body {
 .navbar {
         background: transparent;
         transition: background 0.3s ease-in-out;
+        font-family: 'Spectral', sans-serif; 
       }
 
       /* Navbar Brand Logo */
@@ -794,7 +779,7 @@ body {
 
 }
 .container1 h2 {
-            font-family: "Playfair Display SC", Georgia, "Times New Roman", serif!important;
+            font-family: 'Derivia', sans-serif!important;
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 20px;
@@ -829,7 +814,7 @@ body {
         }
 
         .container1 h2 {
-            font-family: "Playfair Display SC", Georgia, "Times New Roman", serif!important;
+          font-family: 'Derivia', sans-serif!important;
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 20px;
@@ -887,7 +872,7 @@ body {
         /* Button Styling */
         .book-btn {
   background-color: #000;
-  
+  font-family: 'derivia', sans-serif;
   padding: 10px 25px;
   font-size: 1.2rem;
   border-radius: 0px !important;
@@ -938,7 +923,7 @@ a:hover{
   z-index: 1;
   font-family: inherit;
   font-weight: 500;
-
+  font-family: 'Spectral', sans-serif;
   /* Center the button */
   /* margin: 40px auto; Adds space above and centers horizontally */
   text-align: center;
@@ -1017,7 +1002,22 @@ a:hover{
         .footer-logo img {
             height: 50px; /* Adjust logo size */
         }
+        .navbar i{
+  color:white
+}
+.navbar.scrolled i{
+  color:#000
 
+}
+
+.an{
+  text-decoration: none;
+  font-family: 'Spectral', sans-serif; 
+}
+
+.footer-bottom p{
+  font-family: 'Spectral', sans-serif; 
+}
 
 </style>
 </head>
@@ -1025,9 +1025,9 @@ a:hover{
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
           <!-- Center Logo -->
-          <a class="navbar-brand mx-auto d-lg-none" href="#">
-            <img src="/WEB PB2.png" alt="Logo" height="50" />
-          </a>
+          <a class="navbar-brand  d-lg-none" href="#">
+            <img src="/WEB PB2.png" alt="Logo" height="50">
+        </a>
   
           <!-- Navbar Toggler for Mobile -->
           <button
@@ -1088,67 +1088,7 @@ a:hover{
 <!-- Banner Section -->
 
 
-<!-- Highlighted Works Section -->
-<!-- <section class="highlighted-works py-5">
-    <div class="container text-center">
-        <h2 class="section-title">Highlighted Works</h2>
-        <div class="row gx-4 gy-4">
-             Image 1 -->
-            <!-- <div class="col-md-4">
-                <div class="portfolio-item">
-                  <a href="./stories.html"><img src="/imgs/PRVN7946.jpg" class="img-fluid" alt="Sarah & Luke">
-                    <h5>Sarah & Luke</h5>
-                    <p>Engagement</p></a> 
-                </div>
-            </div> -->
-            <!-- Image 2 -->
-            <!-- <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="/imgs/PRVN9052.JPG" class="img-fluid" alt="Richard & Jane">
-                    <h5>Richard & Jane</h5>
-                    <p>Engagement</p>
-                </div>
-            </div> -->
-            <!-- Image 3 -->
-            <!-- <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="/imgs/PRVN7946.jpg" class="img-fluid" alt="Gareth & Eva">
-                    <h5>Gareth & Eva</h5>
-                    <p>Engagement</p>
-                </div>
-            </div> -->
-            <!-- Image 4 -->
-            <!-- <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="/imgs/PRVN8602.jpg" class="img-fluid" alt="Sarah">
-                    <h5>Sarah</h5>
-                    <p>Portrait</p>
-                </div>
-            </div> -->
-            <!-- Image 5 -->
-            <!-- <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="/imgs/PRVN8605.jpg" class="img-fluid" alt="Jane">
-                    <h5>Jane</h5>
-                    <p>Portrait</p>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="/imgs/PRVN8607.jpg" class="img-fluid" alt="Angeline">
-                    <h5>Angeline</h5>
-                    <p>Portrait</p>
-                </div>
-            </div>
-        </div>
 
-        
-        <div class="mt-4">
-            <a href="#" class="btn btn-outline-dark">Get in Touch</a>
-        </div>
-    </div>
-</section> -->
 <div class="container1">
   <div class="row align-items-center">
       <!-- Left Side - Image Carousel -->
@@ -1196,7 +1136,7 @@ a:hover{
           <div class="right-image">
               <img src="/imgs/PRVN8608.jpg" alt="Engagement Couple">
               <div class="text-btn1">
-                  <a href="stories.html"><button class="button-service">View More
+                  <a href="stories1.html"><button class="button-service">View More
                       <span></span>
                   </button></a>
               </div>
@@ -1256,28 +1196,7 @@ a:hover{
     </div>
 </section>
 
-<section class="footer-nav">
-  <div class="container footer-container">
-      <!-- Left Navigation -->
-      <div class="footer-links">
-          <a href="/index.html">Home</a>
-          <a href="/pages/services.html">Services</a>
-          <a href="/pages/portfolio.html">Portfolio</a>
-      </div>
-      
-      <!-- Centered Logo -->
-      <div class="footer-logo">
-         <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
-      </div>
 
-      <!-- Right Navigation -->
-      <div class="footer-links">
-          <a href="/pages/about.html">About Us</a>
-          <a href="/pages/blog.html">Blog</a>
-          <a href="/pages/contact.html">Contact Us</a>
-      </div>
-  </div>
-</section>
 <footer class="footer">
     <div class="footer-container">
       <div class="footer-section">
@@ -1285,7 +1204,8 @@ a:hover{
         <div class="contact">
           <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
           <p>
-            <i class="fas fa-envelope"></i> paperboatphotography.in@gmail.com
+            <!-- <i class="fas fa-envelope"></i>  -->
+            paperboatphotography.in@gmail.com
           </p>
           <!-- <p>
             <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
@@ -1294,6 +1214,9 @@ a:hover{
       </div>
       <div class="vertical-line mx-4"></div>
       <div class="footer-section">
+        <div class="footer-logo">
+          <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
+       </div>
         <p class="quote">
           "Photography takes an instant out of time, altering life by holding it still." – Dorothea Lange
         </p>
@@ -1308,39 +1231,13 @@ a:hover{
         </div>
       </div>
     </div>
-    <div class="full-screen-image">
-      <img src="/imgs/Black Elegant Minimalist Profile.png" alt="Full Screen Image" class="img-fluid">
-  </div>
-<!-- 
-    <div class="image-gallery">
-      <div class="image-set" id="image-set1">
-        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
-        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
-        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
-        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
-        <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
-        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
-      </div>
-      <div class="image-set" id="image-set2">
-        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
-        <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
-        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
-        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
-        <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
-        <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
-      </div>
-    </div> -->
+  
 
     <div class="footer-bottom">
-      <!-- <div class="footer-links">
-        <a href="#">Contact</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-      </div> -->
       <p>
         Copyright &copy; Paperboat 2025 - All
         rights reserved | Designed and Developed by
-        <span class="lastcolor">Sherlin A G</span>
+        <a class="an" href="https://sherlin-ag.netlify.app/"><span class="lastcolor">Sherlin A G</span></a>
       </p>
     </div>
   </footer>

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
        @import url("https://fonts.cdnfonts.com/css/rightman-signature");
+       @import url('https://fonts.cdnfonts.com/css/spectral'); 
+       @import url('https://fonts.cdnfonts.com/css/derivia');
+@import url('https://fonts.cdnfonts.com/css/martel-sans');
 h2,h1 {
   /* font-family: "Send Flowers", serif; */
   font-family: "Rightman Signature";
@@ -18,6 +21,7 @@ h2,h1 {
 .navbar {
   background: transparent;
   transition: background 0.3s ease-in-out;
+  font-family: 'Spectral', sans-serif; 
 }
 
 /* Navbar Brand Logo */
@@ -340,45 +344,6 @@ footer {
 /* Social Media Links */
 
 
-/* .service-card {
-            /* border-radius: 12px; */
-            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background: white;
-            padding: 20px;
-            text-align: center;
-            
-            transition: transform 0.3s ease-in-out;
-        }
-        .service-card:hover {
-            transform: scale(1.01);
-        }
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 0px;
-        }
-        .service-card h5 {
-            margin-top: 15px;
-            font-weight: bold;
-            color: #333;
-        }
-        .quality-list {
-            text-align: left;
-            padding-left: 20px;
-        }
-        .quality-list li {
-            list-style-type: "•"; /* Bullet point */
-            /* padding: 5px 0;
-        }
-        .more-services img {
-            width: 100%;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 0px;
-            margin-bottom: 1px;
-        } */ 
-
 
 
 
@@ -458,29 +423,7 @@ footer {
   color:#5da0d8
 }
 
-/* #scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: #292929;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  display: none; 
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; 
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-#scrollToTopBtn:hover {
-  background-color: #000000;
-  transform: scale(1.1);
-} */
 
 #scrollToTopBtn {
   position: fixed;
@@ -602,6 +545,7 @@ footer {
 }
 
 .step-title {
+  font-family: 'Derivia', sans-serif;
     font-size: 1.4rem;
     margin-top: 10px;
     font-weight: bold;
@@ -654,7 +598,7 @@ footer {
     text-align: center;
 }
 .animated-text {
-
+    font-family: 'Martel Sans', sans-serif;
     font-size: 1.2rem;
     padding-bottom: 10px;
 }
@@ -669,6 +613,7 @@ footer {
 }
 .step-text{
   text-align: justify;
+  font-family: 'Martel Sans', sans-serif;
 }
 
 /* General Section Styling */
@@ -725,7 +670,7 @@ footer {
   min-height: 500px; /* Minimum height to ensure more space */
   display: flex;
   flex-direction: column;
-  
+  font-family: 'Martel Sans', sans-serif;
   align-items: center;
 }
 
@@ -766,6 +711,15 @@ footer {
   transition: 0.3s ease-in-out;
   border: 2px solid #000000;
   font-weight: 500;
+  font-family: 'Spectral', sans-serif;
+}
+.navbar i{
+  color:white
+}
+
+.navbar.scrolled i{
+  color:#000
+
 }
 
 .book-btn:hover {
@@ -778,7 +732,7 @@ footer {
   background: #fff;
   padding: 80px 20px;
   text-align: center;
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-family: 'Derivia', sans-serif;
 }
 
 .services-grid {
@@ -845,7 +799,14 @@ footer {
             height: 50px; /* Adjust logo size */
         }
 
+.an{
+  text-decoration: none;
+  font-family: 'Spectral', sans-serif; 
+}
 
+.footer-bottom p{
+  font-family: 'Spectral', sans-serif; 
+}
 
 
 
@@ -857,9 +818,10 @@ footer {
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <!-- Center Logo -->
-            <a class="navbar-brand mx-auto d-lg-none" href="#">
-                <img src="/WEB PB2.png" alt="Logo" height="50">
-            </a>
+            
+            <a class="navbar-brand  d-lg-none" href="#">
+              <img src="/WEB PB2.png" alt="Logo" height="50">
+          </a>
     
             <!-- Navbar Toggler for Mobile -->
             <button
@@ -1030,31 +992,6 @@ footer {
   </div>
 </section>
 
-<section class="footer-nav">
-  <div class="container footer-container">
-      <!-- Left Navigation -->
-      <div class="footer-links">
-          <a href="/index.html">Home</a>
-          <a href="/pages/services.html">Services</a>
-          <a href="/pages/portfolio.html">Portfolio</a>
-      </div>
-      
-      <!-- Centered Logo -->
-      <div class="footer-logo">
-         <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
-      </div>
-
-      <!-- Right Navigation -->
-      <div class="footer-links">
-          <a href="/pages/about.html">About Us</a>
-          <a href="/pages/blog.html">Blog</a>
-          <a href="/pages/contact.html">Contact Us</a>
-      </div>
-  </div>
-</section>
-
-
-
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-section">
@@ -1062,7 +999,8 @@ footer {
       <div class="contact">
         <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
         <p>
-          <i class="fas fa-envelope"></i> paperboatphotography.in@gmail.com
+          <!-- <i class="fas fa-envelope"></i> -->
+           paperboatphotography.in@gmail.com
         </p>
         <!-- <p>
           <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
@@ -1071,6 +1009,9 @@ footer {
     </div>
     <div class="vertical-line mx-4"></div>
     <div class="footer-section">
+      <div class="footer-logo">
+        <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
+     </div>
       <p class="quote">
         "Photography takes an instant out of time, altering life by holding it still." – Dorothea Lange
       </p>
@@ -1085,39 +1026,14 @@ footer {
       </div>
     </div>
   </div>
-  <div class="full-screen-image">
-    <img src="/imgs/Black Elegant Minimalist Profile.png" alt="Full Screen Image" class="img-fluid">
-</div>
-
-  <!-- <div class="image-gallery">
-    <div class="image-set" id="image-set1">
-      <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
-      <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
-      <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
-      <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
-      <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
-      <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
-    </div>
-    <div class="image-set" id="image-set2">
-      <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
-      <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
-      <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
-      <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
-      <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
-      <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
-    </div>
-  </div> -->
+ 
 
   <div class="footer-bottom">
-    <!-- <div class="footer-links">
-      <a href="#">Contact</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-    </div> -->
+    
     <p>
       Copyright &copy; Paperboat 2025 - All
-      rights reserved | Designed and Developed by
-      <span class="lastcolor">Sherlin A G</span>
+      rights reserved | Developed by
+      <a class="an" href="https://sherlin-ag.netlify.app/"><span class="lastcolor">Sherlin A G</span></a>
     </p>
   </div>
 </footer>
@@ -1126,9 +1042,7 @@ footer {
 <a href="https://wa.me/your-number" target="_blank" class="whatsapp-icon">
   <i class="fab fa-whatsapp"></i>
 </a>
-<!-- <button id="scrollToTopBtn">
-  <i class="fa-sharp fa-solid fa-chevron-up"></i>
-</button> -->
+
 
 <button id="scrollToTopBtn">
   <svg width="50" height="50">
@@ -1148,31 +1062,7 @@ footer {
             navbar.classList.remove("scrolled");
         }
     });
-//     let currentSet = 1; // Track which image set is currently visible
 
-// function switchImages() {
-//     const firstSet = document.getElementById('image-set1');
-//     const secondSet = document.getElementById('image-set2');
-
-//     if (currentSet === 1) {
-//         firstSet.classList.add('fade-out'); // Add fade-out animation to the first set
-//         setTimeout(() => {
-//             firstSet.style.display = 'none'; // Hide the first set
-//             secondSet.style.display = 'block'; // Show the second set
-//             secondSet.classList.remove('fade-out'); // Remove fade-out animation
-//         }, 1000); // Match the duration of the fade-out animation
-//         currentSet = 2; // Switch to the second set
-//     } else {
-//         secondSet.classList.add('fade-out'); // Add fade-out animation to the second set
-//         setTimeout(() => {
-//             secondSet.style.display = 'none'; // Hide the second set
-//             firstSet.style.display = 'block'; // Show the first set
-//             firstSet.classList.remove('fade-out'); // Remove fade-out animation
-//         }, 1000); // Match the duration of the fade-out animation
-//         currentSet = 1; // Switch back to the first set
-//     }
-// }
-// setInterval(switchImages, 3000); 
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 

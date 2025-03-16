@@ -18,6 +18,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
     @import url("https://fonts.cdnfonts.com/css/rightman-signature");
+    @import url('https://fonts.cdnfonts.com/css/spectral'); 
+    @import url('https://fonts.cdnfonts.com/css/derivia');
+@import url('https://fonts.cdnfonts.com/css/martel-sans');
 h2,h1 {
   /* font-family: "Send Flowers", serif; */
   font-family: "Rightman Signature";
@@ -27,6 +30,7 @@ h2,h1 {
       .navbar {
         background: transparent;
         transition: background 0.3s ease-in-out;
+        font-family: 'Spectral', sans-serif; 
       }
 
       /* Navbar Brand Logo */
@@ -333,7 +337,7 @@ h2,h1 {
 
       .booking-text h3 {
         font-size: 1.2rem;
-
+        font-family: 'Derivia', sans-serif;
         color: #222;
         margin-bottom: 10px;
       }
@@ -341,12 +345,14 @@ h2,h1 {
       .booking-text p {
         font-size: 1.1rem;
         color: #555;
+        font-family: 'Martel Sans', sans-serif;
         margin-bottom: 20px;
       }
 
       /* Form Styling */
       .booking-form .form-group {
         margin-bottom: 20px;
+        font-family: 'Martel Sans', sans-serif;
       }
 
       .booking-form .form-control {
@@ -374,6 +380,7 @@ h2,h1 {
   transition: 0.3s ease-in-out;
   border: 2px solid #000000;
   font-weight: 500;
+  font-family: 'Spectral', sans-serif;
 }
 
 .book-btn:hover {
@@ -413,6 +420,7 @@ h2,h1 {
     color: #060606;
     text-align: center;
     margin-bottom: 10px;
+    font-family: 'Derivia', sans-serif;
 }
 
 /* Text Styling */
@@ -421,6 +429,7 @@ h2,h1 {
     color: #555;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Martel Sans', sans-serif;
 }
 
 /* Headings */
@@ -435,6 +444,7 @@ h4 {
     font-size: 16px;
     color: #444;
     line-height: 1.6;
+    font-family: 'Martel Sans', sans-serif;
 }
 
 /* Icons & Spacing */
@@ -534,29 +544,7 @@ h4 {
   color:#5da0d8
 }
 
-/* #scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: #292929;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  display: none; 
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; 
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-#scrollToTopBtn:hover {
-  background-color: #000000;
-  transform: scale(1.1);
-} */
 
 #scrollToTopBtn {
   position: fixed;
@@ -646,7 +634,22 @@ h4 {
             height: 50px; /* Adjust logo size */
         }
 
+        .navbar i{
+  color:white
+}
+.navbar.scrolled i{
+  color:#000
 
+}
+
+.an{
+  text-decoration: none;
+  font-family: 'Spectral', sans-serif; 
+}
+
+.footer-bottom p{
+  font-family: 'Spectral', sans-serif; 
+}
 
     </style>
   </head>
@@ -654,9 +657,9 @@ h4 {
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <!-- Center Logo -->
-        <a class="navbar-brand mx-auto d-lg-none" href="#">
-          <img src="/WEB PB2.png" alt="Logo" height="50" />
-        </a>
+        <a class="navbar-brand  d-lg-none" href="#">
+          <img src="/WEB PB2.png" alt="Logo" height="50">
+      </a>
 
         <!-- Navbar Toggler for Mobile -->
         <button
@@ -769,100 +772,70 @@ h4 {
                           special moments.
                       </p>
 
-                      <form class="booking-form">
-                          <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Your Name" required />
-                          </div>
-
-                          <div class="form-group">
-                              <input type="email" class="form-control" placeholder="Your Email" required />
-                          </div>
-
-                          <div class="form-group">
-                              <input type="tel" class="form-control" placeholder="Your Contact" required />
-                          </div>
-
-                          <!-- <div class="form-group">
-                              <select class="form-control" required>
-                                  <option value="" disabled selected>Select a Service</option>
-                                  <option value="wedding">Wedding Photography</option>
-                                  <option value="engagement">Engagement Shoot</option>
-                                  <option value="birthday">Birthday Photography</option>
-                              </select>
-                          </div> -->
-
-                          <div class="form-group">
-                              <input type="date" class="form-control" required />
-                          </div>
-
-                          <div class="mb-3">
+                      <form class="booking-form" action="https://formspree.io/f/xkgovpdz" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Name" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="contact" placeholder="Contact" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="date" placeholder="Date" required>
+                        </div>
+                    
+                        <div class="mb-3">
                             <label class="form-label">Which of the following are you interested in?</label>
                             <div class="d-flex flex-wrap gap-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="wedding">
+                                    <input class="form-check-input" type="radio" name="interest" value="Wedding" id="wedding">
                                     <label class="form-check-label" for="wedding">Wedding</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="engagement">
+                                    <input class="form-check-input" type="radio" name="interest" value="Engagement" id="engagement">
                                     <label class="form-check-label" for="engagement">Engagement/Pre-Wedding</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="studio">
-                                    <label class="form-check-label" for="studio">Studio Sessions</label>
+                                    <input class="form-check-input" type="radio" name="interest" value="Birthday" id="studio">
+                                    <label class="form-check-label" for="studio">Birthday</label>
                                 </div>
                             </div>
                             <div class="d-flex flex-wrap gap-3 mt-2">
-                                
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="events">
+                                    <input class="form-check-input" type="radio" name="interest" value="Events" id="events">
                                     <label class="form-check-label" for="events">Events</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="other">
-                                    <label class="form-check-label" for="other">Other Inquiry</label>
+                                    <input class="form-check-input" type="radio" name="interest" value="Other Inquiry" id="other">
+                                    <label class="form-check-label" for="other">Other Enquiry</label>
                                 </div>
                             </div>
                         </div>
-
-                          <button type="submit" class="btn book-btn">Book Now</button>
-                      </form>
+                    
+                        <button type="submit" class="btn book-btn">Book Now</button>
+                    </form>
                   </div>
               </div>
           </div>
       </div>
   </section>
 
-  <section class="footer-nav">
-    <div class="container footer-container">
-        <!-- Left Navigation -->
-        <div class="footer-links">
-            <a href="/index.html">Home</a>
-            <a href="/pages/services.html">Services</a>
-            <a href="/pages/portfolio.html">Portfolio</a>
-        </div>
-        
-        <!-- Centered Logo -->
-        <div class="footer-logo">
-           <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
-        </div>
-
-        <!-- Right Navigation -->
-        <div class="footer-links">
-            <a href="/pages/about.html">About Us</a>
-            <a href="/pages/blog.html">Blog</a>
-            <a href="/pages/contact.html">Contact Us</a>
-        </div>
-    </div>
-</section>
+ 
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">
           <h4>GET IN TOUCH</h4>
           <div class="contact">
-            <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p>
-            <p> -->
-              <i class="fas fa-envelope"></i> paperboatphotography.in@gmail.com
+            <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
+            <p>
+              <!-- <i class="fas fa-envelope"></i> -->
+               paperboatphotography.in@gmail.com
             </p>
             <!-- <p>
               <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
@@ -871,6 +844,9 @@ h4 {
         </div>
         <div class="vertical-line mx-4"></div>
         <div class="footer-section">
+          <div class="footer-logo">
+            <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
+         </div>
           <p class="quote">
             "Photography takes an instant out of time, altering life by holding it still." – Dorothea Lange
           </p>
@@ -885,29 +861,7 @@ h4 {
           </div>
         </div>
       </div>
-      <div class="full-screen-image">
-        <img src="/imgs/Black Elegant Minimalist Profile.png" alt="Full Screen Image" class="img-fluid">
-    </div>
-<!-- 
-      <div class="image-gallery">
-        <div class="image-set" id="image-set1">
-          <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
-          <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
-          <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
-          <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
-          <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
-          <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
-        </div>
-        <div class="image-set" id="image-set2">
-          <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 4" />
-          <img src="/imgs/img1.png" class="gallery-img" alt="Gallery Image 5" />
-          <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 6" />
-          <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 1" />
-          <img src="/imgs/img2.png" class="gallery-img" alt="Gallery Image 2" />
-          <img src="/imgs/img3.png" class="gallery-img" alt="Gallery Image 3" />
-        </div>
-      </div> -->
-
+     
       <div class="footer-bottom">
         <!-- <div class="footer-links">
           <a href="#">Contact</a>
@@ -917,7 +871,7 @@ h4 {
         <p>
           Copyright &copy; Paperboat 2025 - All
           rights reserved | Designed and Developed by
-          <span class="lastcolor">Sherlin A G</span>
+          <a class="an" href="https://sherlin-ag.netlify.app/"><span class="lastcolor">Sherlin A G</span></a>
         </p>
       </div>
     </footer>
@@ -947,31 +901,6 @@ h4 {
         }
       });
 
-      // let currentSet = 1; // Track which image set is currently visible
-
-      // function switchImages() {
-      //   const firstSet = document.getElementById("image-set1");
-      //   const secondSet = document.getElementById("image-set2");
-
-      //   if (currentSet === 1) {
-      //     firstSet.classList.add("fade-out"); // Add fade-out animation to the first set
-      //     setTimeout(() => {
-      //       firstSet.style.display = "none"; // Hide the first set
-      //       secondSet.style.display = "block"; // Show the second set
-      //       secondSet.classList.remove("fade-out"); // Remove fade-out animation
-      //     }, 1000); // Match the duration of the fade-out animation
-      //     currentSet = 2; // Switch to the second set
-      //   } else {
-      //     secondSet.classList.add("fade-out"); // Add fade-out animation to the second set
-      //     setTimeout(() => {
-      //       secondSet.style.display = "none"; // Hide the second set
-      //       firstSet.style.display = "block"; // Show the first set
-      //       firstSet.classList.remove("fade-out"); // Remove fade-out animation
-      //     }, 1000); // Match the duration of the fade-out animation
-      //     currentSet = 1; // Switch back to the first set
-      //   }
-      // }
-      // setInterval(switchImages, 3000);
 
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
