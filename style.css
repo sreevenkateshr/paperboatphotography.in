@@ -1350,8 +1350,9 @@ h5 {
 
 .text-box1 p {
   font-size: 18px;
-  font-family: "Martel Sans"!important;
+  font-family: 'Spectral', sans-serif !important;
   color: #6d5f52; /* Soft grayish-brown for readability */
+  text-align: justify;
 }
 
 
