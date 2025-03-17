@@ -1,114 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stories</title>
-           
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>
-    @import url("https://fonts.cdnfonts.com/css/rightman-signature");
-    @import url('https://fonts.cdnfonts.com/css/spectral'); 
-h1,h2 {
-  /* font-family: "Send Flowers", serif; */
-  font-family: "Rightman Signature";
-    font-size: 60px !important;
-    font-weight: normal !important;
-}
-      .head{
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/rightman-signature");
+      @import url("https://fonts.cdnfonts.com/css/spectral");
+      @import url("https://fonts.cdnfonts.com/css/martel-sans");
+      h1,
+      h2 {
+        /* font-family: "Send Flowers", serif; */
+        font-family: "Rightman Signature";
+        font-size: 60px !important;
+        font-weight: normal !important;
+      }
+      .storyname {
+        font-family: "Rightman Signature";
+        margin-top: 8px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .head {
         text-align: center;
         font-size: 2.5rem;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 50px;
+        font-family: "Spectral", sans-serif;
       }
-      .body{
+      .body {
         overflow-x: hidden;
       }
       .container-fluid {
-            padding: 0;
-        }
-        .row {
-            margin: 0;
-        }
-        .img-fluid {
-            width: 100%;
-            height: 100vh; /* Adjust height based on row */
-            object-fit: cover;
-            
-            transition: transform 0.3s ease;
-        }
-        .size {
-            height: 60vh;
-        }
-        .full {
-            height: 70vh;
-        }
-        .half-height {
-            height: 50vh;
-        }
-        .small-img {
-            height: 50vh;
-        }
-        .large-img {
-            height: 50vh;
-        }
-        /* Full-Screen Overlay */
-        .fullscreen-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-        .fullscreen-overlay img {
-          
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 0px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 30px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            background: rgba(255, 0, 0, 0.8);
-            padding: 10px 15px;
-            border-radius: 50%;
-            transition: background 0.3s ease;
-        }
-        .close-btn:hover {
-            background: red;
-        }
-        /* Disable scrolling when full-screen is active */
-        .no-scroll {
-            overflow: hidden;
-            height: 100vh;
-        }
-        .hidden-navbar {
-            transform: translateY(-100%);
-            transition: transform 0.3s ease;
-        }
+        padding: 0;
+      }
+      .row {
+        margin: 0;
+      }
+      .img-fluid {
+        width: 100%;
+        height: 100vh; /* Adjust height based on row */
+        object-fit: cover;
 
-.navbar {
+        transition: transform 0.3s ease;
+      }
+      .size {
+        height: 60vh;
+      }
+      .full {
+        height: 70vh;
+      }
+      .half-height {
+        height: 50vh;
+      }
+      .small-img {
+        height: 50vh;
+      }
+      .large-img {
+        height: 50vh;
+      }
+      /* Full-Screen Overlay */
+      .fullscreen-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+      .fullscreen-overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 0px;
+      }
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        background: rgba(255, 0, 0, 0.8);
+        padding: 10px 15px;
+        border-radius: 50%;
+        transition: background 0.3s ease;
+      }
+      .close-btn:hover {
+        background: red;
+      }
+      /* Disable scrolling when full-screen is active */
+      .no-scroll {
+        overflow: hidden;
+        height: 100vh;
+      }
+      .hidden-navbar {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .navbar {
         background: transparent;
         transition: background 0.3s ease-in-out;
-        font-family: 'Spectral', sans-serif; 
+        font-family: "Spectral", sans-serif;
       }
 
       /* Navbar Brand Logo */
@@ -153,6 +168,10 @@ h1,h2 {
           display: block; /* Make the button block-level to allow centering */
           margin: 0 auto;
         }
+        .head {
+          font-size: 38px !important;
+          margin-top: 50px !important;
+        }
       }
 
       /* Underline Animation on Hover */
@@ -175,10 +194,9 @@ h1,h2 {
         transition: width 0.5s ease-in-out;
         transform: translateX(-50%);
       }
-      .navbar.scrolled .nav-link::after
-{
-  background-color: #000;
-}
+      .navbar.scrolled .nav-link::after {
+        background-color: #000;
+      }
       /* Expand Underline on Hover - Matches text width */
       .navbar-nav .nav-link:hover::after {
         width: 80%; /* Now matches text width only */
@@ -248,18 +266,22 @@ h1,h2 {
         }
       }
       footer {
-    background-color: #f8f8f8;
-    padding-top: 20px;
-    text-align: center;
-    background-image: linear-gradient(180deg, #f2e3de 0%, #ffffff 100%) !important;
-}
+        background-color: #f8f8f8;
+        padding-top: 20px;
+        text-align: center;
+        background-image: linear-gradient(
+          180deg,
+          #f2e3de 0%,
+          #ffffff 100%
+        ) !important;
+      }
 
       .footer-container {
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-       
+
         padding-bottom: 20px;
       }
 
@@ -405,207 +427,199 @@ h1,h2 {
         }
       }
       .vertical-line {
-    width: 2px;
-    background-color: #c1c1c1;
-    height: 80%;
-    min-height: 150px;
-}
-.contact {
-    display: flex
-;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 90px;
-    font-size: 1.2rem;
-}
-.fas.fa-phone-alt {
-  transform: rotate(450deg);
-  display: inline-block; /* Ensures proper rotation */
-}
-
-
+        width: 2px;
+        background-color: #c1c1c1;
+        height: 80%;
+        min-height: 150px;
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 90px;
+        font-size: 1.2rem;
+      }
+      .fas.fa-phone-alt {
+        transform: rotate(450deg);
+        display: inline-block; /* Ensures proper rotation */
+      }
 
       .whatsapp-icon {
-  position: fixed;   /* Stays in place even when scrolling */
-  bottom: 20px;      /* 20px from the bottom */
-  left: 20px;        /* 20px from the left */
-  background-color: #25D366; /* WhatsApp Green */
-  color: white;      /* Icon color */
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%; /* Circular shape */
-  font-size: 35px;   /* Icon size */
-  text-decoration: none;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;     /* Keep it above other elements */
-  transition: transform 0.3s ease-in-out;
-}
+        position: fixed; /* Stays in place even when scrolling */
+        bottom: 20px; /* 20px from the bottom */
+        left: 20px; /* 20px from the left */
+        background-color: #25d366; /* WhatsApp Green */
+        color: white; /* Icon color */
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* Circular shape */
+        font-size: 35px; /* Icon size */
+        text-decoration: none;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Keep it above other elements */
+        transition: transform 0.3s ease-in-out;
+      }
 
-.whatsapp-icon:hover {
-  transform: scale(1.2); /* Smooth hover effect */
-}
-.whatsapp-icon:before {
-  animation: _pulse 1.2s infinite;
-  border-color: inherit;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
-  content: "";
-  height: 50px;
-  position: absolute;
-  width: 50px;  
-} 
-@keyframes _pulse {
-  0% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 101, .75);
-  }
-  100% {
-      box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
-  }
-}
-.navbar-toggler{
-  border-radius: 0px;
-}
-.lastcolor{
-  color:#5da0d8
-}
-
-
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 45px;
-  height: 45px;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 1000;
-  transition: opacity 0.3s;
-}
-
-#scrollToTopBtn svg {
-  position: absolute;
-  top: -2;
-  left: -2;
-}
-
-.navbar i{
-  color:white
-}
-
-.navbar.scrolled i{
-  color:#000
-
-}
-#progress {
-  transform: rotate(-90deg);
-  transform-origin: center;
-  transition: stroke-dashoffset 0.3s;
-}
-
-.fa-chevron-up{
-  font-size: smaller;
-}
-.fab{
-  font-size: xx-large;
-}
-
-
-.full-screen-image {
-  width: 100%;
-  height: 40vh; /* Full viewport height */
-  overflow: hidden;
-  position: relative;
-}
-
-.full-screen-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire area without distortion */
-  object-position: center; /* Centers the image */
-}
-
-@media screen and (max-width: 768px) {
-  .full-screen-image {
-      height: 20vh; /* Adjust height for mobile devices */
-  }
-  
-}
-
-.text-area {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+      .whatsapp-icon:hover {
+        transform: scale(1.2); /* Smooth hover effect */
+      }
+      .whatsapp-icon:before {
+        animation: _pulse 1.2s infinite;
+        border-color: inherit;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
+        content: "";
+        height: 50px;
+        position: absolute;
+        width: 50px;
+      }
+      @keyframes _pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 101, 0.75);
         }
+        100% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
+        }
+      }
+      .navbar-toggler {
+        border-radius: 0px;
+      }
+      .lastcolor {
+        color: #5da0d8;
+      }
 
-        .full-height {
-            height: 70vh;
-        }
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+      #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 1000;
+        transition: opacity 0.3s;
+      }
 
-        .footer-nav {
-            background-color: #f8f9fa; /* Background color */
-            padding: 15px 0;
-        }
-        .footer-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-        }
-        .footer-links {
-            display: flex;
-            gap: 20px;
-        }
-        .footer-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .footer-links a:hover {
-            color: #007bff;
-        }
-        .footer-logo img {
-            height: 50px; /* Adjust logo size */
-        }
+      #scrollToTopBtn svg {
+        position: absolute;
+        top: -2;
+        left: -2;
+      }
 
-        .an{
-  text-decoration: none;
-  font-family: 'Spectral', sans-serif; 
-}
+      .navbar i {
+        color: white;
+      }
 
-.footer-bottom p{
-  font-family: 'Spectral', sans-serif; 
-}
-</style>
-</head>
-<body>
+      .navbar.scrolled i {
+        color: #000;
+      }
+      #progress {
+        transform: rotate(-90deg);
+        transform-origin: center;
+        transition: stroke-dashoffset 0.3s;
+      }
 
-  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-        <div class="container">
-          <!-- Center Logo -->
-          <a class="navbar-brand  d-lg-none" href="#">
-            <img src="/WEB PB2.png" alt="Logo" height="50">
+      .fa-chevron-up {
+        font-size: smaller;
+      }
+      .fab {
+        font-size: xx-large;
+      }
+
+      .full-screen-image {
+        width: 100%;
+        height: 40vh; /* Full viewport height */
+        overflow: hidden;
+        position: relative;
+      }
+
+      .full-screen-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the entire area without distortion */
+        object-position: center; /* Centers the image */
+      }
+
+      @media screen and (max-width: 768px) {
+        .full-screen-image {
+          height: 20vh; /* Adjust height for mobile devices */
+        }
+      }
+
+      .text-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .full-height {
+        height: 70vh;
+      }
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .footer-nav {
+        background-color: #f8f9fa; /* Background color */
+        padding: 15px 0;
+      }
+      .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+      }
+      .footer-links {
+        display: flex;
+        gap: 20px;
+      }
+      .footer-links a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .footer-links a:hover {
+        color: #007bff;
+      }
+      .footer-logo img {
+        height: 50px; /* Adjust logo size */
+      }
+
+      .an {
+        text-decoration: none;
+        font-family: "Spectral", sans-serif;
+      }
+
+      .footer-bottom p {
+        font-family: "Spectral", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+      <div class="container">
+        <!-- Center Logo -->
+        <a class="navbar-brand d-lg-none" href="/index.html">
+          <img src="/WEB PB2.png" alt="Logo" height="50" />
         </a>
-  
-          <!-- Navbar Toggler for Mobile -->
-          <button
+
+        <!-- Navbar Toggler for Mobile -->
+        <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -617,284 +631,320 @@ h1,h2 {
         >
           <span><i class="fa-solid fa-bars"></i></span>
         </button>
-  
-          <div
-            class="collapse navbar-collapse justify-content-between"
-            id="navbarNav"
-          >
-            <!-- Left Side Nav Links -->
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-              </li>
-            </ul>
-  
-            <!-- Center Logo for Desktop -->
-            <a class="navbar-brand d-none d-lg-block mx-auto" href="#">
-              <img src="/WEB PB2.png" alt="Logo" height="50" />
-            </a>
-  
-            <!-- Right Side Nav Links -->
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-  
-      <section class="contact-banner">
-        <div class="overlay"></div>
-        <h1 class="title">Stories</h1>
-      </section>
 
-      <div><h2 class="head">Niki & Abi Engagement</h2></div>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <!-- Left Side Nav Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+          </ul>
 
-      
-      <div class="container-fluid">
-        <!-- First Row: Two equal images filling the screen -->
-        <div class="row g-0">
-            <div class="col-6">
-                <img src="/imgs/PRVN7294.jpg" class="img-fluid size" alt="Image 1">
-            </div>
-            <div class="col-6">
-                <img src="/imgs/PRVN7945.jpg" class="img-fluid size" alt="Image 2">
-            </div>
+          <!-- Center Logo for Desktop -->
+          <a class="navbar-brand d-none d-lg-block mx-auto" href="/index.html">
+            <img src="/WEB PB2.png" alt="Logo" height="50" />
+          </a>
+
+          <!-- Right Side Nav Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
-    
-        <!-- Second Row: One full-width image -->
-        <div class="row g-0">
-            <div class="col-12">
-                <img src="/imgs/PRVN7946.jpg" class="img-fluid full" alt="Image 3">
-            </div>
+      </div>
+    </nav>
+
+    <section class="contact-banner">
+      <div class="overlay"></div>
+      <h1 class="title">Stories</h1>
+    </section>
+
+    <div><h2 class="head">ROSHIBA & JAFRO MARRIAGE</h2></div>
+
+    <div class="container-fluid">
+      <!-- First Row: Two equal images filling the screen -->
+      <div class="row g-0">
+        <div class="col-6">
+          <img src="/imgs/PRVN7294.jpg" class="img-fluid size" alt="Image 1" />
+        </div>
+        <div class="col-6">
+          <img src="/imgs/PRVN7945.jpg" class="img-fluid size" alt="Image 2" />
+        </div>
+      </div>
+
+      <!-- Second Row: One full-width image -->
+      <div class="row g-0">
+        <div class="col-12">
+          <img src="/imgs/PRVN7946.jpg" class="img-fluid full" alt="Image 3" />
+        </div>
+      </div>
+
+      <div class="row full-height">
+        <!-- Left Image -->
+        <div class="col-md-4 p-0 image-container">
+          <img src="/imgs/3 (2)3.png" alt="Left Image" />
         </div>
 
-       
-          <div class="row full-height">
-              <!-- Left Image -->
-              <div class="col-md-4 p-0 image-container">
-                  <img src="/imgs/3 (2)3.png" alt="Left Image">
-              </div>
-      
-              <!-- Text Area -->
-              <div class="col-md-4 text-area d-flex flex-column justify-content-center">
-                  <h2>Niki Adhi Engagement</h2>
-                  
-              </div>
-      
-              <!-- Right Image -->
-              <div class="col-md-4 p-0 image-container">
-                  <img src="/imgs/PRVN8607.jpg" alt="Right Image">
-              </div>
-          </div>
-      
-    
-        <!-- Third Row: Small image on the left, large image on the right -->
-        <div class="row g-0">
-            <div class="col-4">
-                <img src="/imgs/PRVN8602.jpg" class="img-fluid small-img" alt="Image 4">
-            </div>
-            <div class="col-8">
-                <img src="/imgs/PRVN8607.jpg" class="img-fluid large-img" alt="Image 5">
-            </div>
+        <!-- Text Area -->
+        <div
+          class="col-md-4 text-area d-flex flex-column justify-content-center"
+        >
+          <h2 class="storyname">Roshiba Jafro Marriage</h2>
         </div>
-    
-        <!-- Fourth Row: Large image on the left, small image on the right -->
-        <div class="row g-0">
-            <div class="col-8">
-                <img src="/imgs/PRVN8609.jpg" class="img-fluid large-img" alt="Image 6">
-            </div>
-            <div class="col-4">
-                <img src="/imgs/PRVN8605.jpg" class="img-fluid small-img" alt="Image 7">
-            </div>
+
+        <!-- Right Image -->
+        <div class="col-md-4 p-0 image-container">
+          <img src="/imgs/PRVN8607.jpg" alt="Right Image" />
         </div>
+      </div>
+
+      <!-- Third Row: Small image on the left, large image on the right -->
+      <div class="row g-0">
+        <div class="col-4">
+          <img
+            src="/imgs/PRVN8602.jpg"
+            class="img-fluid small-img"
+            alt="Image 4"
+          />
+        </div>
+        <div class="col-8">
+          <img
+            src="/imgs/PRVN8607.jpg"
+            class="img-fluid large-img"
+            alt="Image 5"
+          />
+        </div>
+      </div>
+
+      <!-- Fourth Row: Large image on the left, small image on the right -->
+      <div class="row g-0">
+        <div class="col-8">
+          <img
+            src="/imgs/PRVN8609.jpg"
+            class="img-fluid large-img"
+            alt="Image 6"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            src="/imgs/PRVN8605.jpg"
+            class="img-fluid small-img"
+            alt="Image 7"
+          />
+        </div>
+      </div>
     </div>
     <div class="row g-0">
       <div class="col-12">
-          <img src="/imgs/PRVN7946.jpg" class="img-fluid full" alt="Image 3">
+        <img src="/imgs/PRVN7946.jpg" class="img-fluid full" alt="Image 3" />
       </div>
-  </div>
+    </div>
 
     <div class="fullscreen-overlay" id="fullscreenOverlay">
       <span class="close-btn" id="closeBtn">X</span>
-      <img id="fullscreenImage" src="" alt="Full Screen">
-  </div>
-    
-<footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h4>GET IN TOUCH</h4>
-        <div class="contact">
-          <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
-          <p>
-            <!-- <i class="fas fa-envelope"></i>  -->
-            paperboatphotography.in@gmail.com
-          </p>
-          <!-- <p>
+      <img id="fullscreenImage" src="" alt="Full Screen" />
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>GET IN TOUCH</h4>
+          <div class="contact">
+            <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
+            <p>
+              <!-- <i class="fas fa-envelope"></i>  -->
+              paperboatphotography.in@gmail.com
+            </p>
+            <!-- <p>
             <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
           </p> -->
+          </div>
+        </div>
+        <div class="vertical-line mx-4"></div>
+        <div class="footer-section">
+          <div class="footer-logo">
+            <a href="/index.html"><img src="/PB Logo.png" alt="Logo" /> </a
+            ><!-- Replace with your logo -->
+          </div>
+          <p class="quote">
+            "Photography takes an instant out of time, altering life by holding
+            it still." – Dorothea Lange
+          </p>
+        </div>
+        <div class="vertical-line mx-4"></div>
+        <div class="footer-section">
+          <h4>CONNECT US</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/paperboatphotography.in/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/share/194hGb7YSV/"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://pin.it/Tiw7FmzFK"
+              ><i class="fab fa-pinterest"></i
+            ></a>
+          </div>
         </div>
       </div>
-      <div class="vertical-line mx-4"></div>
-      <div class="footer-section">
-        <div class="footer-logo">
-          <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
-       </div>
-        <p class="quote">
-          "Photography takes an instant out of time, altering life by holding it still." – Dorothea Lange
+
+      <div class="footer-bottom">
+        <p>
+          Copyright &copy; Paperboat 2025 - All rights reserved | Developed by
+          <a href="https://sherlin-ag.netlify.app/"
+            ><span class="lastcolor">Sherlin A G</span></a
+          >
         </p>
       </div>
-      <div class="vertical-line mx-4"></div>
-      <div class="footer-section">
-        <h4>CONNECT US</h4>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/paperboatphotography.in/"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/share/194hGb7YSV/"><i class="fab fa-facebook"></i></a>
-          <a href="https://pin.it/Tiw7FmzFK"><i class="fab fa-pinterest"></i></a>
-        </div>
-      </div>
-    </div>
+    </footer>
 
-    <div class="footer-bottom">
-    
-      <p>
-        Copyright &copy; Paperboat 2025 - All
-        rights reserved | Developed by
-        <a href="https://sherlin-ag.netlify.app/"><span class="lastcolor">Sherlin A G</span></a>
-      </p>
-    </div>
-  </footer>
+    <a href="https://wa.me/your-number" target="_blank" class="whatsapp-icon">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <a href="https://wa.me/your-number" target="_blank" class="whatsapp-icon">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <button id="scrollToTopBtn">
+      <svg width="50" height="50">
+        <circle
+          cx="25"
+          cy="25"
+          r="20"
+          stroke-width="5"
+          fill="none"
+          stroke="#ccc"
+        ></circle>
+        <circle
+          id="progress"
+          cx="25"
+          cy="25"
+          r="20"
+          stroke-width="5"
+          fill="none"
+          stroke="black"
+          stroke-dasharray="125"
+          stroke-dashoffset="125"
+        ></circle>
+      </svg>
+      <i class="fa-sharp fa-solid fa-chevron-up"></i>
+    </button>
+    <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+      // Show the button when scrolling down
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.style.display = "flex";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      });
 
-<button id="scrollToTopBtn">
-    <svg width="50" height="50">
-        <circle cx="25" cy="25" r="20" stroke-width="5" fill="none" stroke="#ccc"></circle>
-        <circle id="progress" cx="25" cy="25" r="20" stroke-width="5" fill="none" stroke="black"
-            stroke-dasharray="125" stroke-dashoffset="125"></circle>
-    </svg>
-    <i class="fa-sharp fa-solid fa-chevron-up"></i>
-</button>
-<script>
-    window.addEventListener("scroll", function () {
-      var navbar = document.querySelector(".navbar");
-      if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      // Scroll to the top when clicking the button
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
 
-// Show the button when scrolling down
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = "flex";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-});
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopButton = document.getElementById("scrollToTopBtn");
+        const progressCircle = document.getElementById("progress");
+        const totalScrollHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const circleLength = 125;
 
-// Scroll to the top when clicking the button
-scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
+        window.addEventListener("scroll", () => {
+          let scrollPercentage = window.scrollY / totalScrollHeight;
+          let strokeOffset = circleLength * (1 - scrollPercentage);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollToTopButton = document.getElementById("scrollToTopBtn");
-  const progressCircle = document.getElementById("progress");
-  const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const circleLength = 125; 
+          progressCircle.style.strokeDashoffset = strokeOffset;
 
-  window.addEventListener("scroll", () => {
-      let scrollPercentage = window.scrollY / totalScrollHeight;
-      let strokeOffset = circleLength * (1 - scrollPercentage);
+          if (window.scrollY > 100) {
+            scrollToTopButton.style.opacity = 1;
+          } else {
+            scrollToTopButton.style.opacity = 0;
+          }
+        });
 
-      progressCircle.style.strokeDashoffset = strokeOffset;
+        scrollToTopButton.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
 
-      if (window.scrollY > 100) {
-          scrollToTopButton.style.opacity = 1;
-      } else {
-          scrollToTopButton.style.opacity = 0;
-      }
-  });
+      document.addEventListener("DOMContentLoaded", function () {
+        var navLinks = document.querySelectorAll(".nav-link");
+        var navbarCollapse = document.querySelector(".navbar-collapse");
 
-  scrollToTopButton.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-      var navLinks = document.querySelectorAll(".nav-link");
-      var navbarCollapse = document.querySelector(".navbar-collapse");
-
-      navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-            toggle: true,
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: true,
+            });
           });
         });
       });
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuToggle = document.getElementById("menu-toggle");
-      const icon = menuToggle.querySelector("i");
-      const navbarNav = document.getElementById("navbarNav");
-      const navLinks = document.querySelectorAll(".nav-link"); // Select all nav items
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const icon = menuToggle.querySelector("i");
+        const navbarNav = document.getElementById("navbarNav");
+        const navLinks = document.querySelectorAll(".nav-link"); // Select all nav items
 
-      // Toggle menu icon on click
-      menuToggle.addEventListener("click", function () {
-        if (icon.classList.contains("fa-bars")) {
-          icon.classList.remove("fa-bars");
-          icon.classList.add("fa-times"); // Change to close icon
-        } else {
-          icon.classList.remove("fa-times");
-          icon.classList.add("fa-bars"); // Change back to menu icon
-        }
-      });
+        // Toggle menu icon on click
+        menuToggle.addEventListener("click", function () {
+          if (icon.classList.contains("fa-bars")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times"); // Change to close icon
+          } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars"); // Change back to menu icon
+          }
+        });
 
-      // Close menu on outside click
-      document.addEventListener("click", function (event) {
-        if (
-          !menuToggle.contains(event.target) &&
-          !navbarNav.contains(event.target)
-        ) {
-          icon.classList.remove("fa-times");
-          icon.classList.add("fa-bars");
-          navbarNav.classList.remove("show"); // Ensure Bootstrap collapses menu
-        }
-      });
+        // Close menu on outside click
+        document.addEventListener("click", function (event) {
+          if (
+            !menuToggle.contains(event.target) &&
+            !navbarNav.contains(event.target)
+          ) {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+            navbarNav.classList.remove("show"); // Ensure Bootstrap collapses menu
+          }
+        });
 
-      // Close menu when clicking on a nav-item
-      navLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          icon.classList.remove("fa-times");
-          icon.classList.add("fa-bars");
-          navbarNav.classList.remove("show"); // Hide menu
+        // Close menu when clicking on a nav-item
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+            navbarNav.classList.remove("show"); // Hide menu
+          });
         });
       });
-    });
-
-      
     </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

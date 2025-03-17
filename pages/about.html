@@ -240,7 +240,16 @@ h2,h1{
             transform: translateY(0);
             text-align: justify;
         }
-
+        .shown{
+          font-family: 'Derivia', sans-serif;
+          font-size: 50px !important;
+        }
+        .shown2{
+          font-family: 'Martel Sans', sans-serif;
+        }
+        .shown3{
+          font-family: 'Spectral', sans-serif;
+        }
         /* Main Section */
         .about-us-section {
             padding: 50px 20px;
@@ -342,6 +351,7 @@ h2,h1{
 
         .profile-card:hover {
             transform: translateY(-10px);
+            
         }
 
         /* Circular Image */
@@ -748,6 +758,10 @@ h2,h1{
 .footer-bottom p{
   font-family: 'Spectral', sans-serif; 
 }
+.headabout{
+  font-family: 'Derivia', sans-serif;
+  font-size: 50px !important;
+}
 
 
     </style>
@@ -757,7 +771,7 @@ h2,h1{
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
           <!-- Center Logo -->
-          <a class="navbar-brand  d-lg-none" href="#">
+          <a class="navbar-brand  d-lg-none" href="/index.html">
             <img src="/WEB PB2.png" alt="Logo" height="50">
         </a>
   
@@ -784,7 +798,7 @@ h2,h1{
               </ul>
   
               <!-- Center Logo for Desktop -->
-              <a class="navbar-brand d-none d-lg-block mx-auto" href="#">
+              <a class="navbar-brand d-none d-lg-block mx-auto" href="/index.html">
                   <img src="/WEB PB2.png" alt="Logo" height="50">
               </a>
   
@@ -818,7 +832,7 @@ h2,h1{
             <!-- Right Side: Text with Animation -->
             <div class="col-lg-6">
                 <div class="about-text">
-                    <h2 class="mb-4">About Paperboat Photography</h2>
+                    <h2 class="mb-4 headabout">About Paperboat Photography</h2>
                     <p class="mb-3 cu">Paperboat is a wedding photography studio based in Tamil Nadu. We specialize in creative and artistic Tamil Nadu wedding photography with a natural relaxed style. Since 2025, couples have chosen Paperboat wedding studio for our breathtaking photography, relentless professionalism, and personalized service. Our style is romantic, timeless, and authentic.</p>
                     <p class="mb-4 cu">Have a look through our website at what we can offer you to make your wedding day the most memorable of your life.</p>
                     <p class="text-center mb-4 squadtext ">Paperboat Squad</p>
@@ -833,8 +847,8 @@ h2,h1{
         <div class="about-us-container d-flex align-items-center">
             <!-- Left Side: Who We Are -->
             <div class="left-side flex-fill">
-                <h2 class="scroll-text text-center">Who We Are</h2>
-                <p class="scroll-text">
+                <h2 class="scroll-text text-center shown">Who We Are</h2>
+                <p class="scroll-text shown2">
                     We provide a personalized approach to each wedding, ensuring your special day is captured authentically. Our team has years of experience in Tamil Nadu wedding photography, delivering timeless, breathtaking photos that tell your unique story.
                 </p>
             </div>
@@ -844,8 +858,8 @@ h2,h1{
   
             <!-- Right Side: Our Approach -->
             <div class="right-side flex-fill">
-                <h2 class="scroll-text text-center">Our Approach</h2>
-                <p class="scroll-text">
+                <h2 class="scroll-text text-center shown">Our Approach</h2>
+                <p class="scroll-text shown2">
                     We focus on creating a natural and relaxed atmosphere, allowing us to capture candid moments that reflect the true essence of your wedding. Our unobtrusive style ensures you enjoy your day while we take care of the memories.
                 </p>
             </div>
@@ -857,7 +871,7 @@ h2,h1{
 <!-- Why Choose Us Section -->
 <section class="why-choose-us-section">
   <div class="container">
-      <h2 class="text-center mb-4 ">Why Choose Us</h2>
+      <h2 class="text-center mb-4 shown">Why Choose Us</h2>
 
       <div class="row">
           <!-- Card 1 -->
@@ -866,9 +880,9 @@ h2,h1{
                   <div class="card-body">
                       <h5 class="card-title">Quality Service</h5>
                       <ul>
-                          <li>High-quality photography</li>
-                          <li>Experienced photographers</li>
-                          <li>Attention to detail</li>
+                          <li class="shown3">High-quality photography</li>
+                          <li class="shown3">Experienced photographers</li>
+                          <li class="shown3">Attention to detail</li>
                       </ul>
                   </div>
               </div>
@@ -880,9 +894,9 @@ h2,h1{
                   <div class="card-body">
                       <h5 class="card-title">Affordable Pricing</h5>
                       <ul>
-                          <li>Competitive pricing</li>
-                          <li>Customizable packages</li>
-                          <li>Value for money</li>
+                          <li class="shown3">Competitive pricing</li>
+                          <li class="shown3">Customizable packages</li>
+                          <li class="shown3">Value for money</li>
                       </ul>
                   </div>
               </div>
@@ -894,9 +908,9 @@ h2,h1{
                   <div class="card-body">
                       <h5 class="card-title">Timely Delivery</h5>
                       <ul>
-                          <li>Fast processing</li>
-                          <li>On-time delivery</li>
-                          <li>Reliable service</li>
+                          <li class="shown3">Fast processing</li>
+                          <li class="shown3">On-time delivery</li>
+                          <li class="shown3">Reliable service</li>
                       </ul>
                   </div>
               </div>
@@ -908,9 +922,9 @@ h2,h1{
                   <div class="card-body">
                       <h5 class="card-title">Customer Satisfaction</h5>
                       <ul>
-                          <li>Personalized service</li>
-                          <li>Customer feedback integration</li>
-                          <li>Hassle-free experience</li>
+                          <li class="shown3">Personalized service</li>
+                          <li class="shown3">Customer feedback integration</li>
+                          <li class="shown3">Hassle-free experience</li>
                       </ul>
                   </div>
               </div>
@@ -926,19 +940,18 @@ h2,h1{
 
       <div class="row">
           <!-- Card 1 -->
-          <div class="col-md-4 mb-4">
+          <div class="col-md-6 mb-4">
               <div class="profile-card">
                   <img src="/imgs/img2.png" alt="Profile Image" class="profile-img">
-                  <h5>John Doe</h5>
+                  <h5>Sree Venkatesh</h5>
                   <ul class="social-iconss">
                       <li><a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                       <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                      
                   </ul>
               </div>
           </div>
 
-          <!-- Card 2 -->
+          <!-- Card 2
           <div class="col-md-4 mb-4">
               <div class="profile-card">
                   <img src="/imgs/img6.png" alt="Profile Image" class="profile-img">
@@ -949,10 +962,10 @@ h2,h1{
                     
                   </ul>
               </div>
-          </div>
+          </div> -->
 
           <!-- Card 3 -->
-          <div class="col-md-4 mb-4">
+          <div class="col-md-6 mb-4">
               <div class="profile-card">
                   <img src="/imgs/img3.png" alt="Profile Image" class="profile-img">
                   <h5>Emily Johnson</h5>
