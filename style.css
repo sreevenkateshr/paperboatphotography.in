@@ -197,6 +197,12 @@ h2 {
   .navbar-nav .nav-link::after {
     bottom: 5px; /* Keep line close to text in mobile view */
   }
+  .about-text{
+    padding-left: 0px !important;
+  }
+  .about-text h2{
+    margin-top: 0px !important;
+  }
 }
 
 /* About Section Styling */
@@ -209,7 +215,7 @@ h2 {
   width: 100%;
   height: auto;
   transition: transform 0.5s ease-in-out;
-  border: 15px solid #ddd;
+  animation: fadeInUp 1s ease-in-out 0.5s backwards;
 }
 
 .about-text h2 {
@@ -217,8 +223,11 @@ h2 {
   font-weight: bold;
   color: #333;
   animation: fadeInUp 1s ease-out forwards;
+  margin-top: 150px;
 }
-
+.about-text{
+  padding-left: 50px;
+}
 .about-text p {
   font-size: 1.2rem;
   font-family: "Spectral"!important;
@@ -707,8 +716,7 @@ a {
 
 .service-card img {
   width: 100%;
-  height: 200px;
-
+  /* height: 200px; */
   object-fit: cover;
   border-radius: 0; /* No curves */
 }
@@ -748,10 +756,12 @@ a {
     grid-template-columns: 1fr; /* 1 per row on mobile */
   }
 
-  .service-card img {
+  /* .service-card img {
     height: 180px;
+  } */
+  .img1{
+    margin-right: 120px !important;
   }
-
   .read-more {
     width: 100%;
   }
@@ -998,6 +1008,7 @@ a {
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  margin-left: 70px;
 }
 
 .email {
@@ -1244,7 +1255,7 @@ a {
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligns items to the left */
+  align-items: center; /* Aligns items to the left */
   padding-left: 90px; /* Removes default padding */
   font-size: 1.2rem;
 }
