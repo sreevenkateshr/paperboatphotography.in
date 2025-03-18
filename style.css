@@ -29,7 +29,7 @@ h2 {
 }
 .pareh1{
   font-family: 'Derivia', sans-serif !important;
-  font-weight: bold;
+  /* font-weight: bold; */
   letter-spacing: 2px;
   line-height: 60px;
 
@@ -46,16 +46,20 @@ h2 {
 
 /* Image Animation - Instant Switch */
 .image1 {
-  animation: switchImage1 20s infinite;
+  animation: switchImage1 15s infinite;
 }
 
 .image2 {
-  animation: switchImage2 20s infinite;
+  animation: switchImage2 15s infinite;
 }
 
 .image3{
-  animation: switchImage3 20s infinite;
+  animation: switchImage3 15s infinite;
 }
+.image4{
+  animation: switchImage4 15s infinite;
+}
+
 
 /* First Image is visible for 10s, then disappears */
 @keyframes switchImage1 {
@@ -82,6 +86,16 @@ h2 {
 }
 
 @keyframes switchImage3 {
+  0%,
+  66% {
+    opacity: 0;
+  }
+  66.01%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes switchImage4 {
   0%,
   66% {
     opacity: 0;
@@ -530,7 +544,7 @@ a {
   font-style: italic;
   color: #000000;
   margin-bottom: 5px;
-  font-size: 1.3rem;
+  font-size: 1.rem;
   line-height: 1.8;
   margin: 10px 0;
   
@@ -750,7 +764,7 @@ a {
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #333;
   margin-bottom: 40px;
 }
@@ -842,7 +856,7 @@ a {
 /* Section Title */
 .section-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #333;
   margin-bottom: 30px;
   
@@ -886,7 +900,7 @@ a {
 
 .testimonial-content h4 {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #333;
   
 }
@@ -950,7 +964,7 @@ a {
 /* Section Title */
 .section-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #333;
   margin-bottom: 10px;
 }
@@ -972,7 +986,7 @@ a {
 
 .booking-text h3 {
   font-size: 2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #222;
   margin-bottom: 10px;
   font-family: 'Derivia', sans-serif;
@@ -1396,13 +1410,25 @@ h5 {
 .wedding-section {
   position: relative;
   width: 100%;
-  height: 90vh; /* Increased section height */
+  height: 65vh; /* Section height */
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 20%, rgba(248, 241, 235, 1) 80%),
-              url('/imgs/PRVN8608.jpg') no-repeat center right;
+  background: url('/imgs/wedlarge.jpg') no-repeat center right;
   background-size: cover;
+  z-index: 1;
 }
+
+.wedding-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 20%, rgba(248, 241, 235, 1) 80%);
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
 
 .content1 {
   
@@ -1413,9 +1439,9 @@ h5 {
 }
 
 .text-box1 {
-  margin-left: 60px;
+  /* margin-left: 100px;              */
   background: rgba(255, 255, 255, 0.75); /* Light semi-transparent background */
-  padding: 60px 40px; /* Increased height */
+  padding: 40px 40px; /* Increased height */
   min-height: 300px; 
   max-width: 500px; /* Ensure proper height */
   border-radius: 0px;
@@ -1631,4 +1657,9 @@ h5 {
   font-family: 'Derivia', sans-serif !important;
   letter-spacing: 4px;
   font-size: 40px ;
+}
+
+.testi{
+  font-family: 'Spectral', sans-serif;
+
 }
