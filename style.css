@@ -27,7 +27,13 @@ h2 {
   width: 100%;
   height: 100%;
 }
+.pareh1{
+  font-family: 'Derivia', sans-serif !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 60px;
 
+}
 /* Background Image Styles */
 .image {
   position: absolute;
@@ -47,13 +53,17 @@ h2 {
   animation: switchImage2 20s infinite;
 }
 
+.image3{
+  animation: switchImage3 20s infinite;
+}
+
 /* First Image is visible for 10s, then disappears */
 @keyframes switchImage1 {
   0%,
-  50% {
+  33% {
     opacity: 1;
   }
-  50.01%,
+  33.01%,
   100% {
     opacity: 0;
   }
@@ -62,10 +72,21 @@ h2 {
 /* Second Image is visible after 10s */
 @keyframes switchImage2 {
   0%,
-  50% {
+  33% {
     opacity: 0;
   }
-  50.01%,
+  33.01%,
+  66% {
+    opacity: 1;
+  }
+}
+
+@keyframes switchImage3 {
+  0%,
+  66% {
+    opacity: 0;
+  }
+  66.01%,
   100% {
     opacity: 1;
   }
@@ -86,7 +107,46 @@ h2 {
   font-style: italic;
   font-size: 1rem;
   color: rgb(250, 250, 249);
+  font-family: 'Spectral', sans-serif; 
 }
+
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for h1 and quote separately */
+.pareh1, .quote1 p, .line {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Delay for each line */
+.show .pareh1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.show .quote1 p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.show .line {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
 
 /* Navbar Styling */
 .navbar {
@@ -1021,7 +1081,6 @@ label{
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  margin-left: 70px;
 }
 
 .email {
@@ -1268,20 +1327,21 @@ label{
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Aligns items to the left */
-  padding-left: 90px; /* Removes default padding */
+  align-items: center; /* Centers the content */
   font-size: 1.2rem;
 }
+
 .contact p {
-  margin: 10px 0; /* Adds spacing between the items */
+  margin: 10px 0;
   display: flex;
-  align-items: center; /* Aligns the icon and text vertically */
+  align-items: center; 
+  justify-content: center; /* Ensures text is centered properly */
+  width: 100%; /* Adjusts to full width for better alignment */
+  text-align: center; 
+  word-break: break-word; /* Prevents text overflow */
 }
 
-.contact i {
-  margin-right: 10px; /* Adds space between the icon and text */
-  color: #070707; /* Color for the icons */
-}
+
 .fab{
   font-size: xx-large;
 }
@@ -1370,6 +1430,7 @@ h5 {
   font-family: 'Cursive', serif;
   margin-bottom: 15px;
   color: #5a4a42; /* Elegant brown shade */
+  letter-spacing: 1px;
 }
 
 .text-box1 p {
@@ -1525,4 +1586,17 @@ h5 {
 
 .footer-bottom p{
   font-family: 'Spectral', sans-serif; 
+}
+
+.fa-instagram:hover{
+  color: #E1306C;
+
+}
+
+.fa-facebook:hover{
+  color:#1877F2;
+}
+
+.fa-pinterest:hover{
+  color:#E60023;
 }

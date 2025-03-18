@@ -143,3 +143,22 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+
+ document.addEventListener("DOMContentLoaded", function () {
+   const content = document.querySelector(".content");
+
+   function checkScroll() {
+     const contentPosition = content.getBoundingClientRect().top;
+     const screenPosition = window.innerHeight / 1.3;
+
+     if (contentPosition < screenPosition) {
+       content.classList.add("show");
+     } else {
+       content.classList.remove("show");
+     }
+   }
+
+   window.addEventListener("scroll", checkScroll);
+   checkScroll(); // To check on page load in case already in view
+ });

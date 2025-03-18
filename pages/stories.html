@@ -472,11 +472,20 @@ h1,h2 {
     min-height: 150px;
 }
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 90px;
-    font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content */
+  font-size: 1.2rem;
+}
+
+.contact p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* Ensures text is centered properly */
+  width: 100%; /* Adjusts to full width for better alignment */
+  text-align: center; 
+  word-break: break-word; /* Prevents text overflow */
 }
 .fas.fa-phone-alt {
   transform: rotate(450deg);
@@ -656,6 +665,19 @@ h1,h2 {
 a{
   text-decoration: none;
 }
+
+.fa-instagram:hover{
+  color: #E1306C;
+
+}
+
+.fa-facebook:hover{
+  color:#1877F2;
+}
+
+.fa-pinterest:hover{
+  color:#E60023;
+}
 </style>
 </head>
 <body>
@@ -814,7 +836,7 @@ a{
       <div class="vertical-line mx-4"></div>
       <div class="footer-section">
         <div class="footer-logo">
-          <a href="/index.html" ><img src="/PB Logo.png" alt="Logo"> </a><!-- Replace with your logo -->
+          <a href="/index.html" ><img src="/WEB PB2.png" alt="Logo"> </a><!-- Replace with your logo -->
        </div>
         <p class="quote">
           "Photography takes an instant out of time, altering life by holding it still." – Dorothea Lange
