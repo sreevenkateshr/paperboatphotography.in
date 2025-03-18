@@ -46,65 +46,41 @@ h2 {
 
 /* Image Animation - Instant Switch */
 .image1 {
-  animation: switchImage1 15s infinite;
+  animation: switchImage1 12s infinite;
 }
 
 .image2 {
-  animation: switchImage2 15s infinite;
+  animation: switchImage2 12s infinite;
 }
 
 .image3{
-  animation: switchImage3 15s infinite;
-}
-.image4{
-  animation: switchImage4 15s infinite;
+  animation: switchImage3 12s infinite;
 }
 
 
-/* First Image is visible for 10s, then disappears */
+/* First Image */
 @keyframes switchImage1 {
-  0%,
-  33% {
-    opacity: 1;
-  }
-  33.01%,
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }       /* Start completely invisible */
+  5%, 30% { opacity: 1; } /* Fade in smoothly */
+  40%, 50% { opacity: 0.5; } /* Start fading out */
+  60%, 100% { opacity: 0; }  /* Fully hidden */
 }
 
-/* Second Image is visible after 10s */
+/* Second Image */
 @keyframes switchImage2 {
-  0%,
-  33% {
-    opacity: 0;
-  }
-  33.01%,
-  66% {
-    opacity: 1;
-  }
+  0%, 30% { opacity: 0; }
+  35%, 65% { opacity: 1; }   /* Fully visible */
+  75%, 85% { opacity: 0.5; } /* Start fading out */
+  90%, 100% { opacity: 0; }  /* Fully hidden */
 }
 
+/* Third Image */
 @keyframes switchImage3 {
-  0%,
-  66% {
-    opacity: 0;
-  }
-  66.01%,
-  100% {
-    opacity: 1;
-  }
+  0%, 60% { opacity: 0; }
+  65%, 97% { opacity: 1; }   /* Fully visible */
+  100% { opacity: 0; }       /* Fade out before loop restart */
 }
-@keyframes switchImage4 {
-  0%,
-  66% {
-    opacity: 0;
-  }
-  66.01%,
-  100% {
-    opacity: 1;
-  }
-}
+
 
 /* Content Styling */
 .content {
