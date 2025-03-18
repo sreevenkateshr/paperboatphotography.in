@@ -1,26 +1,34 @@
+# 📸 Paperboat Photography - Website
 
-# Wedding Photography Website
+Welcome to the official **Paperboat Photography** website! We specialize in capturing timeless wedding and event photography in Nagercoil, ensuring that your precious moments last a lifetime.
 
-Welcome to the official repository for the Wedding Photography website! This website is designed to showcase photography services for various events such as weddings, birthdays, baptisms, holy communions, and more. The website provides visitors with information about the services offered, the team's background, pricing packages, and an interactive gallery of photos.
+## 🌟 Features
+- **Beautiful Hero Section** with a captivating introduction.
+- **Photography Portfolio** showcasing wedding and event shoots.
+- **Service Pages** for weddings, engagements, and events.
+- **Blog Section** for photography tips and client stories.
+- **Booking System** with an easy-to-use form.
+- **Social Media Integration** for Instagram, Facebook, and WhatsApp.
 
-## Features
+---
 
-- **Home Page**: Displays a welcoming introduction to the business with an attractive design.
-- **About Us Page**: Introduces the team and explains the photography philosophy and experience.
-- **Services Page**: Details the different photography services offered for various events.
-- **Gallery Page**: Displays a selection of high-quality wedding and event photos in a grid format.
-- **Pricing Page**: Lists the different pricing packages available for potential clients.
-- **Contact Page**: Provides contact details and a simple form to inquire about services.
-  
-## Technologies Used
+## 🚀 Live Website
+🌐 **[Visit Paperboat Photography](https://paperboatphotography.in/)**  
 
-- **HTML5**: Used for structuring the content and pages.
-- **CSS3**: For styling the pages and creating a responsive layout.
-- **JavaScript**: (Optional) Could be used for interactive elements or enhancements.
-- **Responsive Design**: Ensures that the website is mobile-friendly and looks great on all devices.
+---
 
-## Installation
+## 🎨 Technologies Used
+- **HTML5** - Structure of the website.
+- **CSS3 & Bootstrap** - Styling and responsiveness.
+- **JavaScript** - Interactive elements and animations.
+- **Font Awesome** - Icons for navigation and social media.
+- **Google Fonts** - Custom typography.
+- **SEO Optimized** - Meta tags and Open Graph integration.
 
-1. Clone the repository to your local machine:
-   ```bash
-    https://github.com/sherlinag/Website.git
+---
+
+## 🛠️ How to Set Up Locally
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/sherlinag/paperboat-photography.git
+
