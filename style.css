@@ -500,7 +500,7 @@ a {
 /* Title styling */
 .section-title {
   font-size: 3rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #333;
   margin-bottom: 20px;
   font-family: 'Derivia', sans-serif;
