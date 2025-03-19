@@ -1389,7 +1389,7 @@ h5 {
   height: 65vh; /* Section height */
   display: flex;
   align-items: center;
-  background: url('/imgs/wedlarge.jpg') no-repeat center right;
+  background: url('/imgs/4.jpg') no-repeat center right;
   background-size: cover;
   z-index: 1;
 }
@@ -1639,3 +1639,4 @@ h5 {
   font-family: 'Spectral', sans-serif;
 
 }
+
