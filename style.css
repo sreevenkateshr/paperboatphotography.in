@@ -2,6 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/derivia');
 @import url('https://fonts.cdnfonts.com/css/martel-sans');
 @import url('https://fonts.cdnfonts.com/css/spectral'); 
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Great+Vibes&family=Julius+Sans+One&family=Lexend+Deca:wght@100..900&family=Love+Light&family=Oswald:wght@200..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Ruthie&display=swap');
 h2 {
   /* font-family: "Send Flowers", serif; */
   font-family: "Rightman Signature";
@@ -1069,7 +1070,7 @@ label{
 
 .footer-section h4 {
   font-size: 18px;
-  font-weight: bold;
+  /* font-weight: bold; */
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
@@ -1323,13 +1324,17 @@ label{
 }
 
 .contact p {
-  margin: 10px 0;
+  margin: 1px 0;
   display: flex;
   align-items: center; 
   justify-content: center; /* Ensures text is centered properly */
   width: 100%; /* Adjusts to full width for better alignment */
   text-align: center; 
   word-break: break-word; /* Prevents text overflow */
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+
 }
 
 
@@ -1646,3 +1651,5 @@ img {
   user-select: none;
   -webkit-user-drag: none;
 }
+
+
