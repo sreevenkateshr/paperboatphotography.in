@@ -568,7 +568,29 @@
             navbar.classList.remove("scrolled");
         }
     });
-    
+
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+            console.log("Right-click disabled on images"); // Debugging log
+        });
+
+        img.addEventListener("mousedown", (event) => {
+            if (event.button === 1) { // 1 = Middle mouse button
+                event.preventDefault();
+                console.log("Middle-click disabled on images");
+            }
+        });
+
+        img.addEventListener("dragstart", (event) => {
+            event.preventDefault();
+            console.log("Dragging disabled on images");
+        });
+    });
+});
     
 </script>
 
