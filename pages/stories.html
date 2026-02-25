@@ -33,31 +33,53 @@
 
     <!-- Structured Data / JSON-LD for Stories Page -->
     <script type="application/ld+json">
-    {
+     {
       "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Paperboat Photography Stories",
-      "url": "https://paperboatphotography.in/stories.html",
-      "description": "Heartfelt wedding and engagement photography stories captured by Paperboat Photography in Nagercoil, Kanyakumari, Tamil Nadu.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Paperboat Photography",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://paperboatphotography.in/logo.png"
-        }
+      "@type": "Photographer",
+      "name": "Paperboat Photography",
+      "image": "https://paperboatphotography.in/logo.png",
+      "url": "https://paperboatphotography.in/",
+      "telephone": "+91-6374926377",
+      "email": "contact@paperboatphotography.in",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kottar, Nagercoil",
+        "addressLocality": "Nagercoil",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "629001",
+        "addressCountry": "IN"
       },
-      "author": {
+      "founder": {
         "@type": "Person",
         "name": "Sree Venkatesh"
       },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://paperboatphotography.in/stories.html"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "35"
       },
-      "image": "https://paperboatphotography.in/stories-thumbnail.jpg",
-      "datePublished": "2025-01-01",
-      "dateModified": "2025-01-01"
+      "review": [
+        {
+          "@type": "Review",
+          "author": "Anjali & Ravi",
+          "datePublished": "2025-11-12",
+          "reviewBody": "Paperboat Photography captured our wedding beautifully. The photos are candid, romantic, and truly reflect our love story.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": "Meera & Karthik",
+          "datePublished": "2025-09-05",
+          "reviewBody": "Exceptional service and stunning photography! Highly recommend Paperboat Photography for weddings in Nagercoil and Kanyakumari.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          }
+        }
+      ]
     }
     </script>
   <link rel="icon" href="/imgs/favicon.ico" type="image/x-icon">
@@ -859,7 +881,7 @@ img {
           <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
           <p>
             <!-- <i class="fas fa-envelope"></i>  -->
-            PAPERBOATPHOTOGRAPHY.IN@GMAIL.COM
+            CONTACT@PAPERBOATPHOTOGRAPHY.IN
           </p>
           <!-- <p>
             <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.

@@ -32,38 +32,45 @@
 
     <!-- Structured Data / JSON-LD for Contact Page & LocalBusiness -->
     <script type="application/ld+json">
-    {
+ {
       "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://paperboatphotography.in/contact.html"
+      "@type": "Photographer",
+      "name": "Paperboat Photography",
+      "image": "https://paperboatphotography.in/logo.png",
+      "url": "https://www.paperboatphotography.in/pages/contact.html",
+      "telephone": "+91-6374926377",
+      "email": "contact@paperboatphotography.in",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kottar, Nagercoil",
+        "addressLocality": "Nagercoil",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "629002",
+        "addressCountry": "IN"
       },
-      "url": "https://paperboatphotography.in/contact.html",
-      "name": "Contact Paperboat Photography",
-      "description": "Get in touch with Paperboat Photography for professional wedding and event photography in Nagercoil, Kanyakumari, Tamil Nadu.",
-      "contactOption": "TollFree",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Paperboat Photography",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://paperboatphotography.in/logo.png"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Kottar, Nagercoil",
-          "addressLocality": "Nagercoil",
-          "addressRegion": "Tamil Nadu",
-          "postalCode": "629001",
-          "addressCountry": "IN"
-        },
-        "telephone": "+91-1234567890",
-        "email": "info@paperboatphotography.in",
-        "founder": {
-          "@type": "Person",
-          "name": "Sree Venkatesh"
-        }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 8.1780,
+        "longitude": 77.4280
+      },
+      "description": "Paperboat Photography offers professional wedding and event photography in Nagercoil, Kanyakumari district, Tamil Nadu. Specializing in candid, artistic, and traditional weddings.",
+      "priceRange": "$$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Sree Venkatesh"
       }
     }
     </script>
@@ -928,7 +935,7 @@ img {
             <!-- <p><i class="fas fa-phone-alt"></i> +91 6374926377</p> -->
             <p>
               <!-- <i class="fas fa-envelope"></i> -->
-              PAPERBOATPHOTOGRAPHY.IN@GMAIL.COM
+              CONTACT@PAPERBOATPHOTOGRAPHY.IN
             </p>
             <!-- <p>
               <i class="fas fa-map-marker-alt"></i> Kottar, Nagercoil, Kanniyakumari.
